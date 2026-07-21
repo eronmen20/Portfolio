@@ -13,19 +13,11 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const colorMap: Record<string, string> = {
-  "Laboratory Skills": "from-blue-500 to-cyan-400",
-  "Research Skills": "from-blue-500 to-sky-400",
-  "Data Management": "from-violet-500 to-purple-400",
-  "Web Development": "from-orange-500 to-amber-400",
-  "Soft Skills": "from-pink-500 to-rose-400",
-};
-
-const chipColorMap: Record<string, string> = {
-  "Laboratory Skills": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/30",
-  "Research Skills": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/30",
-  "Data Management": "bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/30",
-  "Web Development": "bg-orange-50 dark:bg-orange-950/30 border-orange-200 dark:border-orange-800/30",
-  "Soft Skills": "bg-pink-50 dark:bg-pink-950/30 border-pink-200 dark:border-pink-800/30",
+  "Laboratory Skills": "from-blue-500 to-sky-400",
+  "Research Skills": "from-violet-500 to-purple-400",
+  "Data Management": "from-orange-500 to-amber-400",
+  "Web Development": "from-pink-500 to-rose-400",
+  "Soft Skills": "from-cyan-500 to-teal-400",
 };
 
 export default function Skills() {
@@ -58,7 +50,6 @@ export default function Skills() {
           {data.categories.map((cat, i) => {
             const Icon = iconMap[cat.title] || Code;
             const color = colorMap[cat.title] || "from-gray-500 to-gray-600";
-            const chipColor = chipColorMap[cat.title] || "bg-gray-50 dark:bg-gray-950/30";
 
             return (
               <motion.div
@@ -70,9 +61,7 @@ export default function Skills() {
                 className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className={`w-11 h-11 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-md`}
-                  >
+                  <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-md`}>
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-lg font-heading font-semibold">
@@ -80,7 +69,7 @@ export default function Skills() {
                   </h3>
                 </div>
 
-                {/* Skill Chips with color */}
+                {/* Skill Chips - transparent, clean */}
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((skill, j) => (
                     <motion.span
@@ -89,7 +78,7 @@ export default function Skills() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 + j * 0.05 }}
-                      className={`px-3 py-1.5 text-sm rounded-full ${chipColor} text-foreground font-medium transition-all cursor-default`}
+                      className="px-3 py-1.5 text-sm rounded-full bg-foreground/5 text-muted-foreground border border-border/50 font-medium"
                     >
                       {skill}
                     </motion.span>
