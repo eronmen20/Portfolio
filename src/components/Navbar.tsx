@@ -31,7 +31,7 @@ const navLinks = [
   { href: "#portfolio", label: "Portfolio", hasMega: true },
   // { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
-  { href: "#certifications", label: "Certifications" },
+  { href: "#certifications", label: "Certifications & Achievements" },
   { href: "#contact", label: "Contact" },
 ];
 

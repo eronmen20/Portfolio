@@ -26,14 +26,14 @@ export default function Certifications() {
           className="text-center mb-16"
         >
           <span className="text-primary font-medium text-sm tracking-wider uppercase">
-            Credentials
+            Credentials & Recognition
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-bold mt-2 mb-4">
-            <span className="gradient-text">Certifications</span>
+            <span className="gradient-text">Certifications & Achievements</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications and courses that validate my skills and
-            commitment to continuous learning.
+            Professional certifications, courses, and achievements that reflect my
+            commitment to continuous learning and professional growth.
           </p>
         </motion.div>
 
