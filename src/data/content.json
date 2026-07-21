@@ -106,7 +106,7 @@
           {"src": "/images/projects/lab-culture/aseptik.jpeg", "caption": "Aseptic transfer technique using inoculation loop near Bunsen burner"},
           {"src": "/images/projects/lab-culture/Purifikasi.png", "caption": "Pure culture isolation on nutrient agar plate"},
           {"src": "/images/projects/lab-culture/Purifikasi bakteri.jpeg", "caption": "Fungial purification — sub-culturing isolated colonies"},
-          {"src": "/images/projects/lab-culture/Isolasi.png", "caption": "Streak plate method — quadrant streak for single colony isolation"},
+          {"src": "/images/projects/lab-culture/Isolasi.png", "caption": "Isolation technique (Spread Plate, Pour Plate, Streak Plate)"},
           {"src": "/images/projects/lab-culture/Spread-plate.png", "caption": "Spread plate method for viable colony counting"}
         ]
       }
@@ -155,7 +155,7 @@
           "Microscope Slides & Cover Slips"
         ],
         "gallery": [
-          {"src": "/images/projects/identifikasi/gram.jpeg", "caption": "Gram staining result — Gram-positive (purple) and Gram-negative (pink) bacteria"},
+          {"src": "/images/projects/identifikasi/gram.jpeg", "caption": "Gram staining result - Gram-negative (pink) bacteria"},
           {"src": "/images/projects/identifikasi/isolasi.jpeg", "caption": "Bacterial isolation on selective media plate"},
           {"src": "/images/projects/identifikasi/slide.jpeg", "caption": "Slide culture technique for fungal colony examination"},
           {"src": "/images/projects/identifikasi/biokimia.jpeg", "caption": "Biochemical tests — catalase, citrate, and motility assays"},
@@ -252,8 +252,8 @@
         "gallery": [
           {"src": "/images/projects/bio-learning/screen-2.jpeg", "caption": "Tactile relief Javanese characters with Braille labels"},
           {"src": "/images/projects/bio-learning/screen-1.jpeg", "caption": "Arduino-powered audio guidance module integration"},
-          {"src": "/images/projects/bio-learning/screen-4.jpeg", "caption": "Student interaction — exploring Javanese script through touch"},
-          {"src": "/images/projects/bio-learning/screen-3.jpeg", "caption": "Complete learning kit with 3D printed characters and audio module"}
+          {"src": "/images/projects/bio-learning/screen-4.jpeg", "caption": "Language Translation Button (Indonesia and Javanese"},
+          {"src": "/images/projects/bio-learning/screen-3.jpeg", "caption": "Power Buttton and Port Charger"}
         ]
       }
     },
@@ -387,8 +387,8 @@
         "gallery": [
           {"src": "/images/projects/biolearn-app/home.png", "caption": "Student dashboard — chapter-based learning system with progress tracking"},
           {"src": "/images/projects/biolearn-app/admin.png", "caption": "Admin panel — content management and analytics dashboard"},
-          {"src": "/images/projects/biolearn-app/1.png", "caption": "Interactive flashcard with image hotspot mapping"},
-          {"src": "/images/projects/biolearn-app/2.png", "caption": "Bilingual praktikum viewer with step-by-step guidance"}
+          {"src": "/images/projects/biolearn-app/1.png", "caption": "Interactive learning materials"},
+          {"src": "/images/projects/biolearn-app/2.png", "caption": "Interactive flash card with image hotspot mapping"}
         ]
       }
     },
