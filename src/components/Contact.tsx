@@ -61,14 +61,36 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setSending(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Failed to send message");
+        return;
+      }
+
+      setSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
-    }, 3000);
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -213,13 +235,18 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  disabled={submitted}
+                  disabled={submitted || sending}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:shadow-lg transition-all hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {submitted ? (
                     <>
                       <CheckCircle className="w-5 h-5" />
                       Message Sent!
+                    </>
+                  ) : sending ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
                     </>
                   ) : (
                     <>
@@ -228,6 +255,10 @@ export default function Contact() {
                     </>
                   )}
                 </button>
+
+                {error && (
+                  <p className="text-sm text-red-500 text-center mt-2">{error}</p>
+                )}
               </div>
             </form>
           </motion.div>
