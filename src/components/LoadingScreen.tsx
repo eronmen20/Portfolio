@@ -21,20 +21,20 @@ export default function LoadingScreen() {
           className="fixed inset-0 z-[200] flex items-center justify-center bg-background"
         >
           <div className="flex flex-col items-center gap-6">
-            {/* DNA Helix Animation */}
+            {/* Colorful spinner */}
             <div className="relative w-16 h-16">
               <motion.div
-                className="absolute inset-0 rounded-full border-3 border-primary/30 border-t-primary"
+                className="absolute inset-0 rounded-full border-3 border-emerald-500/30 border-t-emerald-500"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-2 rounded-full border-3 border-accent/30 border-b-accent"
+                className="absolute inset-2 rounded-full border-3 border-violet-500/30 border-b-violet-500"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-4 rounded-full bg-primary/20"
+                className="absolute inset-4 rounded-full bg-gradient-to-br from-emerald-500/20 to-violet-500/20"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               />
@@ -50,11 +50,15 @@ export default function LoadingScreen() {
               <span className="text-lg font-heading font-semibold gradient-text">
                 Loading Portfolio
               </span>
-              <div className="flex gap-1">
-                {[0, 1, 2].map((i) => (
+              <div className="flex gap-1.5">
+                {[
+                  "bg-emerald-500",
+                  "bg-violet-500",
+                  "bg-orange-500",
+                ].map((color, i) => (
                   <motion.div
                     key={i}
-                    className="w-2 h-2 rounded-full bg-primary"
+                    className={`w-2 h-2 rounded-full ${color}`}
                     animate={{ opacity: [0.3, 1, 0.3] }}
                     transition={{
                       duration: 1,

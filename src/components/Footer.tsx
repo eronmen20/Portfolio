@@ -48,12 +48,11 @@ export default function Footer() {
   return (
     <footer className="relative bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer */}
         <div className="py-12 grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 via-violet-500 to-orange-500 flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-sm">P</span>
               </div>
               <span className="font-heading font-bold text-lg">Portfolio</span>
@@ -63,7 +62,6 @@ export default function Footer() {
               technology. Open to new opportunities and collaborations.
             </p>
 
-            {/* Social Icons */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -108,7 +106,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="py-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Portfolio. All rights reserved.

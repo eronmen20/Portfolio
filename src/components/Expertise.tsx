@@ -12,17 +12,24 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const colorMap: Record<string, string> = {
-  Education: "from-green-500 to-emerald-600",
-  "Research & Laboratory": "from-blue-500 to-cyan-600",
-  "Data Management": "from-purple-500 to-violet-600",
-  "Web Development": "from-orange-500 to-amber-600",
+  Education: "from-emerald-500 to-teal-500",
+  "Research & Laboratory": "from-blue-500 to-cyan-500",
+  "Data Management": "from-violet-500 to-purple-500",
+  "Web Development": "from-orange-500 to-amber-500",
 };
 
 const bgMap: Record<string, string> = {
-  Education: "bg-green-50 dark:bg-green-950/30",
+  Education: "bg-emerald-50 dark:bg-emerald-950/30",
   "Research & Laboratory": "bg-blue-50 dark:bg-blue-950/30",
-  "Data Management": "bg-purple-50 dark:bg-purple-950/30",
+  "Data Management": "bg-violet-50 dark:bg-violet-950/30",
   "Web Development": "bg-orange-50 dark:bg-orange-950/30",
+};
+
+const borderMap: Record<string, string> = {
+  Education: "hover:border-emerald-400/40",
+  "Research & Laboratory": "hover:border-blue-400/40",
+  "Data Management": "hover:border-violet-400/40",
+  "Web Development": "hover:border-orange-400/40",
 };
 
 export default function Expertise() {
@@ -55,6 +62,7 @@ export default function Expertise() {
             const Icon = iconMap[item.title] || Code;
             const color = colorMap[item.title] || "from-gray-500 to-gray-600";
             const bg = bgMap[item.title] || "bg-gray-50 dark:bg-gray-950/30";
+            const borderHover = borderMap[item.title] || "hover:border-gray-400/40";
 
             return (
               <motion.div
@@ -63,18 +71,18 @@ export default function Expertise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
-                className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className={`group relative p-6 rounded-2xl bg-card border border-border ${borderHover} hover:shadow-xl transition-all duration-300 overflow-hidden`}
               >
-                {/* Gradient accent */}
+                {/* Colorful top accent bar - always visible */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-100 transition-opacity`}
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color}`}
                 />
 
                 <div className="flex items-start gap-4">
                   <div
-                    className={`flex-shrink-0 w-14 h-14 rounded-2xl ${bg} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                    className={`flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-md`}
                   >
-                    <Icon className="w-7 h-7 text-primary" />
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
 
                   <div className="flex-1 min-w-0">
@@ -90,7 +98,7 @@ export default function Expertise() {
                       {item.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border hover:border-primary/30 hover:text-primary transition-colors"
+                          className={`px-3 py-1 text-xs font-medium rounded-full ${bg} text-foreground border border-border transition-colors`}
                         >
                           {skill}
                         </span>

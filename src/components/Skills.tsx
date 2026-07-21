@@ -13,11 +13,19 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const colorMap: Record<string, string> = {
-  "Laboratory Skills": "from-blue-500 to-cyan-500",
-  "Research Skills": "from-green-500 to-emerald-500",
-  "Data Management": "from-purple-500 to-violet-500",
-  "Web Development": "from-orange-500 to-amber-500",
-  "Soft Skills": "from-pink-500 to-rose-500",
+  "Laboratory Skills": "from-blue-500 to-cyan-400",
+  "Research Skills": "from-emerald-500 to-teal-400",
+  "Data Management": "from-violet-500 to-purple-400",
+  "Web Development": "from-orange-500 to-amber-400",
+  "Soft Skills": "from-pink-500 to-rose-400",
+};
+
+const chipColorMap: Record<string, string> = {
+  "Laboratory Skills": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/30",
+  "Research Skills": "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/30",
+  "Data Management": "bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/30",
+  "Web Development": "bg-orange-50 dark:bg-orange-950/30 border-orange-200 dark:border-orange-800/30",
+  "Soft Skills": "bg-pink-50 dark:bg-pink-950/30 border-pink-200 dark:border-pink-800/30",
 };
 
 export default function Skills() {
@@ -50,6 +58,7 @@ export default function Skills() {
           {data.categories.map((cat, i) => {
             const Icon = iconMap[cat.title] || Code;
             const color = colorMap[cat.title] || "from-gray-500 to-gray-600";
+            const chipColor = chipColorMap[cat.title] || "bg-gray-50 dark:bg-gray-950/30";
 
             return (
               <motion.div
@@ -62,7 +71,7 @@ export default function Skills() {
               >
                 <div className="flex items-center gap-3 mb-5">
                   <div
-                    className={`w-11 h-11 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                    className={`w-11 h-11 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-md`}
                   >
                     <Icon className="w-5 h-5 text-white" />
                   </div>
@@ -71,7 +80,7 @@ export default function Skills() {
                   </h3>
                 </div>
 
-                {/* Skill Chips */}
+                {/* Skill Chips with color */}
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((skill, j) => (
                     <motion.span
@@ -80,7 +89,7 @@ export default function Skills() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 + j * 0.05 }}
-                      className="px-3 py-1.5 text-sm rounded-full bg-muted text-foreground border border-border font-medium hover:border-primary/40 hover:bg-primary/5 hover:text-primary transition-all cursor-default"
+                      className={`px-3 py-1.5 text-sm rounded-full ${chipColor} text-foreground font-medium transition-all cursor-default`}
                     >
                       {skill}
                     </motion.span>

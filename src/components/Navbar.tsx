@@ -27,7 +27,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Track active section
       const sections = navLinks.map((l) => l.href.slice(1));
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
@@ -60,14 +59,12 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          scrolled
-            ? "glass shadow-lg"
-            : "bg-transparent"
+          scrolled ? "glass shadow-lg" : "bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
+            {/* Logo - colorful gradient */}
             <a
               href="#home"
               onClick={(e) => {
@@ -76,12 +73,10 @@ export default function Navbar() {
               }}
               className="flex items-center gap-2"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 via-violet-500 to-orange-500 flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-sm">P</span>
               </div>
-              <span className="font-heading font-bold text-lg">
-                Portfolio
-              </span>
+              <span className="font-heading font-bold text-lg">Portfolio</span>
             </a>
 
             {/* Desktop Nav */}
@@ -105,7 +100,7 @@ export default function Navbar() {
                   {activeSection === link.href.slice(1) && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"
+                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-emerald-500 to-violet-500 rounded-full"
                     />
                   )}
                 </a>
@@ -114,7 +109,6 @@ export default function Navbar() {
 
             {/* Right side */}
             <div className="flex items-center gap-2">
-              {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg hover:bg-muted transition-colors cursor-pointer"
@@ -127,7 +121,6 @@ export default function Navbar() {
                 )}
               </button>
 
-              {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors cursor-pointer"
