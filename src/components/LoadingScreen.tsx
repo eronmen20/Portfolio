@@ -24,7 +24,7 @@ export default function LoadingScreen() {
             {/* Colorful spinner */}
             <div className="relative w-16 h-16">
               <motion.div
-                className="absolute inset-0 rounded-full border-3 border-emerald-500/30 border-t-emerald-500"
+                className="absolute inset-0 rounded-full border-3 border-blue-500/30 border-t-blue-500"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
               />
@@ -34,7 +34,7 @@ export default function LoadingScreen() {
                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-4 rounded-full bg-gradient-to-br from-emerald-500/20 to-violet-500/20"
+                className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-500/20 to-violet-500/20"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               />
@@ -52,7 +52,7 @@ export default function LoadingScreen() {
               </span>
               <div className="flex gap-1.5">
                 {[
-                  "bg-emerald-500",
+                  "bg-blue-500",
                   "bg-violet-500",
                   "bg-orange-500",
                 ].map((color, i) => (

@@ -5,7 +5,7 @@ import { Download, FolderOpen, Mail, Microscope, FlaskConical, Dna, Atom } from 
 import profile from "@/data/profile.json";
 
 const floatingIcons = [
-  { Icon: Microscope, x: "10%", y: "20%", delay: 0, size: 28, color: "text-emerald-500/20" },
+  { Icon: Microscope, x: "10%", y: "20%", delay: 0, size: 28, color: "text-blue-500/20" },
   { Icon: FlaskConical, x: "85%", y: "15%", delay: 0.5, size: 24, color: "text-violet-500/20" },
   { Icon: Dna, x: "75%", y: "75%", delay: 1, size: 32, color: "text-blue-500/20" },
   { Icon: Atom, x: "15%", y: "70%", delay: 1.5, size: 26, color: "text-orange-500/20" },
@@ -40,7 +40,7 @@ export default function Hero() {
         ))}
 
         {/* Colorful gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/8 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
         <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "4s" }} />
       </div>
@@ -58,9 +58,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               {profile.status}
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function Hero() {
               <a
                 href={profile.cvFile}
                 download
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium hover:shadow-lg hover:shadow-emerald-500/25 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-sky-500 text-white font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-0.5"
               >
                 <Download className="w-4 h-4" />
                 Download CV
@@ -131,7 +131,7 @@ export default function Hero() {
             className="flex-shrink-0"
           >
             <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-violet-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-br from-blue-500/20 via-violet-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={profile.photo}
@@ -158,7 +158,7 @@ export default function Hero() {
 
               {/* Colorful decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/20"
+                className="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/20 to-sky-500/20 border border-blue-500/20"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 8, repeat: Infinity }}
               />

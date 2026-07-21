@@ -12,21 +12,21 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const colorMap: Record<string, string> = {
-  Education: "from-emerald-500 to-teal-500",
+  Education: "from-blue-500 to-sky-500",
   "Research & Laboratory": "from-blue-500 to-cyan-500",
   "Data Management": "from-violet-500 to-purple-500",
   "Web Development": "from-orange-500 to-amber-500",
 };
 
 const bgMap: Record<string, string> = {
-  Education: "bg-emerald-50 dark:bg-emerald-950/30",
+  Education: "bg-blue-50 dark:bg-blue-950/30",
   "Research & Laboratory": "bg-blue-50 dark:bg-blue-950/30",
   "Data Management": "bg-violet-50 dark:bg-violet-950/30",
   "Web Development": "bg-orange-50 dark:bg-orange-950/30",
 };
 
 const borderMap: Record<string, string> = {
-  Education: "hover:border-emerald-400/40",
+  Education: "hover:border-blue-400/40",
   "Research & Laboratory": "hover:border-blue-400/40",
   "Data Management": "hover:border-violet-400/40",
   "Web Development": "hover:border-orange-400/40",

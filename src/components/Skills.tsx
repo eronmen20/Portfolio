@@ -14,7 +14,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 const colorMap: Record<string, string> = {
   "Laboratory Skills": "from-blue-500 to-cyan-400",
-  "Research Skills": "from-emerald-500 to-teal-400",
+  "Research Skills": "from-blue-500 to-sky-400",
   "Data Management": "from-violet-500 to-purple-400",
   "Web Development": "from-orange-500 to-amber-400",
   "Soft Skills": "from-pink-500 to-rose-400",
@@ -22,7 +22,7 @@ const colorMap: Record<string, string> = {
 
 const chipColorMap: Record<string, string> = {
   "Laboratory Skills": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/30",
-  "Research Skills": "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/30",
+  "Research Skills": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/30",
   "Data Management": "bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/30",
   "Web Development": "bg-orange-50 dark:bg-orange-950/30 border-orange-200 dark:border-orange-800/30",
   "Soft Skills": "bg-pink-50 dark:bg-pink-950/30 border-pink-200 dark:border-pink-800/30",

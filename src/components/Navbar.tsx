@@ -73,7 +73,7 @@ export default function Navbar() {
               }}
               className="flex items-center gap-2"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 via-violet-500 to-orange-500 flex items-center justify-center shadow-md">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-violet-500 to-orange-500 flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-sm">P</span>
               </div>
               <span className="font-heading font-bold text-lg">Portfolio</span>
@@ -100,7 +100,7 @@ export default function Navbar() {
                   {activeSection === link.href.slice(1) && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-emerald-500 to-violet-500 rounded-full"
+                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full"
                     />
                   )}
                 </a>
