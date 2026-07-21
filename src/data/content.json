@@ -28,13 +28,13 @@
       "description": "An interactive e-learning platform for biology students featuring quizzes, simulations, and progress tracking.",
       "category": "Education",
       "tags": ["HTML", "CSS", "JavaScript", "Education"],
-      "image": "/images/projects/education-1.svg",
+      "image": "/images/projects/bio-learning/thumb.svg",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Designed and developed an interactive e-learning platform aimed at biology students. The platform features adaptive quizzes, visual simulations of biological processes, and a comprehensive progress tracking system that helps students identify areas for improvement.",
+        "overview": "Designed and developed an interactive e-learning platform aimed at biology students. The platform features adaptive quizzes, visual simulations of biological processes, and a comprehensive progress tracking system.",
         "challenge": "Traditional biology learning materials were static and unengaging. Students struggled to visualize complex biological processes like cell division, photosynthesis, and DNA replication.",
         "solution": "Built an interactive web application with animated simulations that break down complex processes into digestible steps. Added adaptive quizzes that adjust difficulty based on student performance.",
         "results": [
@@ -44,7 +44,10 @@
         ],
         "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "Canvas API", "LocalStorage"],
         "gallery": [
-          "/images/projects/education-1.svg"
+          "/images/projects/bio-learning/thumb.svg",
+          "/images/projects/bio-learning/screen-1.svg",
+          "/images/projects/bio-learning/screen-2.svg",
+          "/images/projects/bio-learning/screen-3.svg"
         ]
       }
     },
@@ -54,15 +57,15 @@
       "description": "Digital system for recording and managing microbiology laboratory results with automated analysis.",
       "category": "Research",
       "tags": ["Research", "Data Analysis", "Documentation"],
-      "image": "/images/projects/research-1.svg",
+      "image": "/images/projects/micro-lab/thumb.svg",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Developed a digital laboratory report system for microbiology research. The system streamlines the process of recording sample data, performing automated analysis, and generating comprehensive research reports.",
-        "challenge": "Laboratory reports were handwritten, prone to errors, and difficult to organize. Searching for historical data was time-consuming and inefficient.",
-        "solution": "Created a structured digital system with standardized input forms, automated calculations, and searchable database. Reports can be generated in multiple formats with consistent formatting.",
+        "overview": "Developed a digital laboratory report system for microbiology research. The system streamlines recording sample data, performing automated analysis, and generating comprehensive research reports.",
+        "challenge": "Laboratory reports were handwritten, prone to errors, and difficult to organize. Searching for historical data was time-consuming.",
+        "solution": "Created a structured digital system with standardized input forms, automated calculations, and searchable database.",
         "results": [
           "Reduced report generation time by 60%",
           "Eliminated handwriting errors in data recording",
@@ -70,7 +73,9 @@
         ],
         "technologies": ["Microsoft Excel", "VBA Macros", "Data Validation", "Pivot Tables", "Chart Generation"],
         "gallery": [
-          "/images/projects/research-1.svg"
+          "/images/projects/micro-lab/thumb.svg",
+          "/images/projects/micro-lab/screen-1.svg",
+          "/images/projects/micro-lab/screen-2.svg"
         ]
       }
     },
@@ -80,23 +85,25 @@
       "description": "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
       "category": "Data Management",
       "tags": ["Excel", "Data Cleaning", "Visualization"],
-      "image": "/images/projects/data-1.svg",
+      "image": "/images/projects/dashboard/thumb.svg",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Created a comprehensive Excel-based dashboard for tracking and analyzing student academic performance. The dashboard aggregates data from multiple sources and presents insights through interactive charts and summary tables.",
-        "challenge": "Student performance data was scattered across multiple spreadsheets with inconsistent formatting. Teachers had no centralized view of student progress.",
-        "solution": "Built a unified dashboard with automated data import, cleaning routines, and dynamic visualizations. Teachers can filter by class, subject, semester, and individual student.",
+        "overview": "Created a comprehensive Excel-based dashboard for tracking and analyzing student academic performance. Aggregates data from multiple sources with interactive charts.",
+        "challenge": "Student performance data was scattered across multiple spreadsheets with inconsistent formatting.",
+        "solution": "Built a unified dashboard with automated data import, cleaning routines, and dynamic visualizations.",
         "results": [
           "Centralized data from 15+ separate spreadsheets into one dashboard",
           "Reduced data processing time from 2 hours to 15 minutes",
           "Enabled early identification of at-risk students"
         ],
-        "technologies": ["Microsoft Excel", "Power Query", "Pivot Charts", "Conditional Formatting", "VLOOKUP/INDEX-MATCH"],
+        "technologies": ["Microsoft Excel", "Power Query", "Pivot Charts", "Conditional Formatting", "VLOOKUP"],
         "gallery": [
-          "/images/projects/data-1.svg"
+          "/images/projects/dashboard/thumb.svg",
+          "/images/projects/dashboard/screen-1.svg",
+          "/images/projects/dashboard/screen-2.svg"
         ]
       }
     },
@@ -106,24 +113,26 @@
       "description": "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
       "category": "Web Development",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "image": "/images/projects/web-1.svg",
+      "image": "/images/projects/portfolio/thumb.svg",
       "links": {
         "github": "https://github.com/yourusername/portfolio",
         "demo": "https://your-portfolio.vercel.app"
       },
       "details": {
-        "overview": "Designed and developed a modern, responsive portfolio website showcasing multidisciplinary expertise in biology, research, data management, and web development. Built with performance and accessibility as top priorities.",
-        "challenge": "Needed a professional online presence that could effectively communicate expertise across multiple disciplines while maintaining a clean, modern aesthetic.",
-        "solution": "Built with Next.js App Router for optimal performance, Tailwind CSS for responsive design, and Framer Motion for smooth animations. Content is separated into JSON files for easy editing.",
+        "overview": "Designed and developed a modern, responsive portfolio website showcasing multidisciplinary expertise. Built with performance and accessibility as top priorities.",
+        "challenge": "Needed a professional online presence that could effectively communicate expertise across multiple disciplines.",
+        "solution": "Built with Next.js App Router, Tailwind CSS, and Framer Motion. Content separated into JSON files for easy editing.",
         "results": [
           "Achieved 95+ Lighthouse score across all metrics",
           "Fully responsive from 375px to 1440px+",
-          "Dark mode support with system preference detection",
-          "Loading time under 2 seconds"
+          "Dark mode support with system preference detection"
         ],
         "technologies": ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Lucide Icons"],
         "gallery": [
-          "/images/projects/web-1.svg"
+          "/images/projects/portfolio/thumb.svg",
+          "/images/projects/portfolio/screen-1.svg",
+          "/images/projects/portfolio/screen-2.svg",
+          "/images/projects/portfolio/screen-3.svg"
         ]
       }
     },
@@ -133,15 +142,15 @@
       "description": "Comprehensive teaching materials for scientific writing workshops targeting undergraduate students.",
       "category": "Education",
       "tags": ["Teaching", "Scientific Writing", "Materials"],
-      "image": "/images/projects/education-2.svg",
+      "image": "/images/projects/writing-workshop/thumb.svg",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Developed a complete set of teaching materials for a scientific writing workshop aimed at undergraduate biology students. Covers everything from literature review to manuscript preparation.",
-        "challenge": "Undergraduate students lacked structured guidance on scientific writing. Existing resources were too advanced or not tailored to biology disciplines.",
-        "solution": "Created a step-by-step curriculum with practical exercises, templates, checklists, and real-world examples from biology research papers.",
+        "overview": "Developed a complete set of teaching materials for a scientific writing workshop aimed at undergraduate biology students.",
+        "challenge": "Undergraduate students lacked structured guidance on scientific writing.",
+        "solution": "Created a step-by-step curriculum with practical exercises, templates, checklists, and real-world examples.",
         "results": [
           "Workshop attended by 100+ students across 3 sessions",
           "Student paper submission rate increased by 35%",
@@ -149,7 +158,8 @@
         ],
         "technologies": ["Microsoft Word", "Google Slides", "Canva", "Academic Templates"],
         "gallery": [
-          "/images/projects/education-2.svg"
+          "/images/projects/writing-workshop/thumb.svg",
+          "/images/projects/writing-workshop/screen-1.svg"
         ]
       }
     },
@@ -159,15 +169,15 @@
       "description": "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
       "category": "Web Development",
       "tags": ["Web App", "Database", "Laboratory"],
-      "image": "/images/projects/web-2.svg",
+      "image": "/images/projects/sample-tracker/thumb.svg",
       "links": {
         "github": "https://github.com/yourusername/sample-tracker",
         "demo": "https://sample-tracker.vercel.app"
       },
       "details": {
-        "overview": "Built a web-based sample tracking application that manages laboratory samples throughout their lifecycle — from collection and labeling to analysis and result reporting.",
-        "challenge": "Samples were tracked manually using paper logs, leading to misplacement, duplicate entries, and delayed processing times.",
-        "solution": "Developed a web application with barcode-style ID generation, real-time status tracking, and automated notifications for pending samples.",
+        "overview": "Built a web-based sample tracking application that manages laboratory samples throughout their lifecycle.",
+        "challenge": "Samples were tracked manually using paper logs, leading to misplacement and delayed processing.",
+        "solution": "Developed a web application with barcode-style ID generation, real-time status tracking, and automated notifications.",
         "results": [
           "Eliminated sample misplacement incidents",
           "Reduced average processing time by 45%",
@@ -175,7 +185,9 @@
         ],
         "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage", "JSON", "Responsive Design"],
         "gallery": [
-          "/images/projects/web-2.svg"
+          "/images/projects/sample-tracker/thumb.svg",
+          "/images/projects/sample-tracker/screen-1.svg",
+          "/images/projects/sample-tracker/screen-2.svg"
         ]
       }
     }

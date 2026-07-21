@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#3b82f608" rx="12"/>
+  <rect x="2" y="2" width="796" height="446" fill="none" stroke="#3b82f620" stroke-width="2" rx="10"/>
+  <text x="50%" y="45%" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#3b82f660">Sample Tracker/Thumb</text>
+  <text x="50%" y="58%" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#3b82f640">Tambah gambar di sini</text>
+</svg>
