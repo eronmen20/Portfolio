@@ -220,7 +220,6 @@
         ]
       }
     },
-   
     {
       "slug": "biology-learning-module",
       "title": "Repin Aja-Relief Pintar Aksara Jawa",
@@ -260,39 +259,82 @@
     },
     {
       "slug": "student-performance-dashboard",
-      "title": "Student Performance Dashboard",
-      "description": "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
+      "title": "Attendance Tracker Dashboard",
+      "description": "Excel-based dashboard for tracking and analyzing employee attendance across multiple metrics.",
       "category": "Data Management",
       "tags": [
         "Excel",
         "Data Cleaning",
         "Visualization"
       ],
-      "image": "/images/projects/dashboard/thumb.svg",
+      "image": "/images/projects/dashboard/2.png",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Created a comprehensive Excel-based dashboard for tracking and analyzing student academic performance. Aggregates data from multiple sources with interactive charts.",
-        "challenge": "Student performance data was scattered across multiple spreadsheets with inconsistent formatting.",
-        "solution": "Built a unified dashboard with automated data import, cleaning routines, and dynamic visualizations.",
+        "overview": "Developed an Excel-based Attendance Tracker Dashboard to automate attendance recording and summarize attendance data. Implemented formulas including VLOOKUP, IF, IFERROR, SUMIF, and INDEX-MATCH to process attendance records accurately. Created Pivot Tables and summary dashboards to monitor attendance trends, department performance, and individual attendance rates, reducing manual calculations and improving administrative efficiency. ",
+        "challenge": "Manual attendance tracking is time-consuming and prone to calculation errors, especially when managing records for multiple participants. Generating attendance summaries and department-level reports also required repetitive manual work.",
+        "solution": "Designed an automated Excel workbook that validates attendance records, calculates attendance percentages, identifies attendance status, and generates dynamic summaries using formulas and Pivot Tables. The dashboard provides quick insights into department performance and individual attendance statistics.",
         "results": [
-          "Centralized data from 15+ separate spreadsheets into one dashboard",
-          "Reduced data processing time from 2 hours to 15 minutes",
-          "Enabled early identification of at-risk students"
+          "Automated attendance percentage calculations using Excel formulas.",
+          "Generated department-wise attendance summaries with Pivot Tables.",
+          "Reduced manual data processing through formula-based automation.",
+          "Improved accuracy and consistency of attendance reporting."
         ],
         "technologies": [
           "Microsoft Excel",
-          "Power Query",
+          "IF/IFERROR",
+          "SUMIF",
+          "INDEX-MATCH",
           "Pivot Charts",
           "Conditional Formatting",
           "VLOOKUP"
         ],
         "gallery": [
-          "/images/projects/dashboard/thumb.svg",
-          "/images/projects/dashboard/screen-1.svg",
-          "/images/projects/dashboard/screen-2.svg"
+          "/images/projects/dashboard/1.png",
+          "/images/projects/dashboard/das.png"
+        ]
+      }
+    },
+    {
+      "slug": "sales-data-analysis",
+      "title": "Sales Data Analysis",
+      "description": "Excel-based sales data analysis project that transformed raw datasets into structured reports using advanced formulas and Pivot Tables, demonstrating practical skills in data cleaning, reporting, and business analysis.",
+      "category": "Data Management",
+      "tags": [
+        "Excel",
+        "Data Cleaning",
+        "Visualization"
+      ],
+      "image": "/images/projects/dashboard/2.png",
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "details": {
+        "overview": "Developed a sales data analysis dashboard as part of a self-directed Microsoft Excel learning project. Cleaned and standardized raw sales data using advanced text functions, calculated revenue metrics, and created Pivot Table reports to analyze sales performance across countries and continents. The project demonstrates practical skills in data transformation, reporting, and spreadsheet automation for business decision-making.",
+        "challenge": "Raw sales data contained inconsistent text formatting and required extensive cleaning before meaningful analysis could be performed. Generating sales summaries across different regions also involved repetitive manual calculations.",
+        "solution": "Applied Excel text functions, including TRIM, LEFT, MID, RIGHT, FIND, and SUBSTITUTE, to standardize the dataset. Calculated sales revenue using Excel formulas and created Pivot Tables to summarize sales performance by country and continent, enabling faster reporting and clearer business insights.",
+        "results": [
+          "Standardized raw sales data for consistent analysis.",
+          "Automated revenue calculations using Excel formulas.",
+          "Generated Pivot Table summaries by country and continent.",
+          "Improved data consistency through text transformation functions.",
+          "Produced structured reports to support data-driven decision making."
+        ],
+        "technologies": [
+          "Microsoft Excel",
+          "Pivot Tables",
+          "TRIM",
+          "LEFT, MID, RIGHT",
+          "FIND",
+          "SUBSTITUTE",
+          "Formula-Based Data Analysis"
+        ],
+        "gallery": [
+          "/images/projects/dashboard/1.png",
+          "/images/projects/dashboard/das.png"
         ]
       }
     },
