@@ -305,9 +305,11 @@
       "tags": [
         "Excel",
         "Data Cleaning",
-        "Visualization"
+        "Data Analysis",
+        "Visualization",
+        "Business Reporting"
       ],
-      "image": "/images/projects/dashboard/2.png",
+      "image": "/images/projects/dashboard/S3.png",
       "links": {
         "github": null,
         "demo": null
@@ -333,9 +335,56 @@
           "Formula-Based Data Analysis"
         ],
         "gallery": [
-          "/images/projects/dashboard/1.png",
-          "/images/projects/dashboard/das.png"
+          "/images/projects/dashboard/S6.png",
+          "/images/projects/dashboard/S4.png",
+          "/images/projects/dashboard/S5.png"
         ]
+      }
+    },
+    {
+      "slug": "biolearn-app",
+      "title": "BioLearn — Interactive Biology Learning Platform",
+      "description": "Full-stack web application for interactive biology learning with chapter-based materials, flashcards, quizzes, praktikum viewer, progress tracking, and a comprehensive admin panel.",
+      "category": "Web Development",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Zustand"
+      ],
+      "image": "/images/projects/biolearn-app/thumb.svg",
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "details": {
+        "overview": "Designed and developed BioLearn, a full-stack interactive biology learning platform built with Next.js 16 App Router, TypeScript, and Supabase. The platform features a structured chapter-based learning system (Bab → Sub-Bab) with rich content rendering, interactive flashcards with image hotspots, automated quiz system, bilingual praktikum viewer, real-time announcement bell, and per-student progress tracking. Includes a full admin dashboard for content management, user analytics, AI-assisted tools, and system configuration.",
+        "challenge": "Traditional biology learning platforms rely on static PDF content with no interactive elements, making it difficult for students to engage with complex biological concepts. Managing structured educational content with chapters, sub-chapters, quizzes, and multimedia across different content types required a flexible and scalable architecture.",
+        "solution": "Built a modular content architecture using Supabase as the backend with structured Bab/Sub-Bab hierarchy. Implemented rich content rendering with accordion sections, interactive flashcard system with image hotspot mapping, and a bilingual praktikum viewer. Used Zustand for client state management, Framer Motion for smooth transitions, and a media proxy layer for optimized image delivery. The admin panel provides full CRUD for all content types with real-time analytics.",
+        "results": [
+          "Structured learning system with Bab → Sub-Bab hierarchy covering complete biology curriculum",
+          "Interactive flashcards with image hotspot mapping for visual learning",
+          "Automated quiz system with instant feedback and progress tracking",
+          "Bilingual praktikum viewer (Indonesian/English) with step-by-step guidance",
+          "Real-time announcement system with 60-second polling and read/unread tracking",
+          "Full admin dashboard with content management, user analytics, and AI-assisted tools",
+          "Password reset via email using Resend integration",
+          "Glossary system for biology terminology reference"
+        ],
+        "technologies": [
+          "Next.js 16 (App Router)",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "Supabase (Database + Auth + RLS)",
+          "SQLite (better-sqlite3)",
+          "Framer Motion",
+          "Zustand (State Management)",
+          "Resend (Email)",
+          "Lucide Icons"
+        ],
+        "gallery": []
       }
     },
     {
