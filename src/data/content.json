@@ -405,8 +405,8 @@
       ],
       "image": "/images/projects/portfolio/thumb.svg",
       "links": {
-        "github": "https://github.com/yourusername/portfolio",
-        "demo": "https://your-portfolio.vercel.app"
+        "github": "https://github.com/eronmen20/Portfolio",
+        "demo": "https://portfolio-woad-two-81.vercel.app/"
       },
       "details": {
         "overview": "Designed and developed a modern, responsive portfolio website showcasing multidisciplinary expertise. Built with performance and accessibility as top priorities.",
