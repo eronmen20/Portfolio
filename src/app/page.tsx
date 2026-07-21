@@ -5,7 +5,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Expertise from "@/components/Expertise";
 import Portfolio from "@/components/Portfolio";
-import Experience from "@/components/Experience";
+// Experience section hidden for now
+// import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
@@ -33,7 +34,7 @@ export default function Home() {
         <About />
         <Expertise />
         <Portfolio />
-        <Experience />
+        {/* <Experience /> */}
         <Skills />
         <Certifications />
         <Contact />

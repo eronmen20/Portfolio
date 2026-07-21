@@ -24,7 +24,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#expertise", label: "Expertise" },
   { href: "#portfolio", label: "Portfolio" },
-  { href: "#experience", label: "Experience" },
+  // { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },

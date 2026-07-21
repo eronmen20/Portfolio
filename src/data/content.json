@@ -354,10 +354,10 @@
         "Framer Motion",
         "Zustand"
       ],
-      "image": "/images/projects/biolearn-app/thumb.svg",
+      "image": "/images/projects/biolearn-app/landing page.png",
       "links": {
-        "github": null,
-        "demo": null
+        "github": "https://github.com/eronmen20/BioLearn",
+        "demo": "https://bio-learn-iota.vercel.app/"
       },
       "details": {
         "overview": "Designed and developed BioLearn, a full-stack interactive biology learning platform built with Next.js 16 App Router, TypeScript, and Supabase. The platform features a structured chapter-based learning system (Bab → Sub-Bab) with rich content rendering, interactive flashcards with image hotspots, automated quiz system, bilingual praktikum viewer, real-time announcement bell, and per-student progress tracking. Includes a full admin dashboard for content management, user analytics, AI-assisted tools, and system configuration.",
@@ -384,7 +384,12 @@
           "Resend (Email)",
           "Lucide Icons"
         ],
-        "gallery": []
+        "gallery": [
+          "/images/projects/biolearn-app/home.png",
+          "/images/projects/biolearn-app/admin.png",
+          "/images/projects/biolearn-app/1.png",
+          "/images/projects/biolearn-app/2.png"
+        ]
       }
     },
     {
@@ -424,45 +429,6 @@
           "/images/projects/portfolio/screen-1.svg",
           "/images/projects/portfolio/screen-2.svg",
           "/images/projects/portfolio/screen-3.svg"
-        ]
-      }
-    },
-    {
-      "slug": "sample-tracker",
-      "title": "Sample Tracking Application",
-      "description": "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
-      "category": "Web Development",
-      "tags": [
-        "Web App",
-        "Database",
-        "Laboratory"
-      ],
-      "image": "/images/projects/sample-tracker/thumb.svg",
-      "links": {
-        "github": "https://github.com/yourusername/sample-tracker",
-        "demo": "https://sample-tracker.vercel.app"
-      },
-      "details": {
-        "overview": "Built a web-based sample tracking application that manages laboratory samples throughout their lifecycle.",
-        "challenge": "Samples were tracked manually using paper logs, leading to misplacement and delayed processing.",
-        "solution": "Developed a web application with barcode-style ID generation, real-time status tracking, and automated notifications.",
-        "results": [
-          "Eliminated sample misplacement incidents",
-          "Reduced average processing time by 45%",
-          "Real-time visibility into 200+ active samples"
-        ],
-        "technologies": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "LocalStorage",
-          "JSON",
-          "Responsive Design"
-        ],
-        "gallery": [
-          "/images/projects/sample-tracker/thumb.svg",
-          "/images/projects/sample-tracker/screen-1.svg",
-          "/images/projects/sample-tracker/screen-2.svg"
         ]
       }
     }
