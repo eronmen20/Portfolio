@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2563eb15" rx="8"/>
+  <rect x="1" y="1" width="398" height="298" fill="none" stroke="#2563eb30" stroke-width="2" rx="7"/>
+  <text x="50%" y="45%" text-anchor="middle" font-family="system-ui" font-size="14" fill="#2563eb80">Cert 1</text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="system-ui" font-size="11" fill="#2563eb50">Tambah gambar di sini</text>
+</svg>

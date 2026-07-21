@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, FileText, Eye } from "lucide-react";
+import { ExternalLink, Eye } from "lucide-react";
+import Link from "next/link";
 import content from "@/data/content.json";
 
 function GithubIcon({ className }: { className?: string }) {
@@ -13,11 +14,7 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
-// Kategori yang bisa punya GitHub & Demo
 const webCategories = ["Web Development"];
-
-// Kategori yang pakai Document link
-const docCategories = ["Education", "Research", "Data Management"];
 
 const categories = [
   "All",
@@ -51,7 +48,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A selection of projects across education, research, data management,
-            and web development.
+            and web development. Click to view full details.
           </p>
         </motion.div>
 
@@ -83,11 +80,10 @@ export default function Portfolio() {
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => {
               const isWeb = webCategories.includes(project.category);
-              const isDoc = docCategories.includes(project.category);
 
               return (
                 <motion.div
-                  key={project.title}
+                  key={project.slug}
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -122,62 +118,49 @@ export default function Portfolio() {
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                      {/* View Detail - selalu ada */}
-                      {project.links.view && project.links.view !== "#" && (
-                        <a
-                          href={project.links.view}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                          title="View Project"
-                        >
-                          <Eye className="w-5 h-5" />
-                        </a>
-                      )}
+                      {/* View Detail - SELALU ADA, link ke halaman internal */}
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                        title="View Details"
+                      >
+                        <Eye className="w-5 h-5" />
+                      </Link>
 
                       {/* GitHub - HANYA untuk Web Development */}
-                      {isWeb && project.links.github && project.links.github !== "#" && (
-                        <a
-                          href={project.links.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                          title="GitHub"
-                        >
-                          <GithubIcon className="w-5 h-5" />
-                        </a>
-                      )}
+                      {isWeb &&
+                        project.links.github &&
+                        project.links.github !== "#" && (
+                          <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                            title="GitHub"
+                          >
+                            <GithubIcon className="w-5 h-5" />
+                          </a>
+                        )}
 
                       {/* Live Demo - HANYA untuk Web Development */}
-                      {isWeb && project.links.demo && project.links.demo !== "#" && (
-                        <a
-                          href={project.links.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                          title="Live Demo"
-                        >
-                          <ExternalLink className="w-5 h-5" />
-                        </a>
-                      )}
-
-                      {/* Document - untuk Education, Research, Data Management */}
-                      {isDoc && project.links.document && project.links.document !== "#" && (
-                        <a
-                          href={project.links.document}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                          title="View Document"
-                        >
-                          <FileText className="w-5 h-5" />
-                        </a>
-                      )}
+                      {isWeb &&
+                        project.links.demo &&
+                        project.links.demo !== "#" && (
+                          <a
+                            href={project.links.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                            title="Live Demo"
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                          </a>
+                        )}
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-5">
+                  <Link href={`/projects/${project.slug}`} className="block p-5">
                     <span className="text-xs font-medium text-primary uppercase tracking-wider">
                       {project.category}
                     </span>
@@ -199,7 +182,7 @@ export default function Portfolio() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               );
             })}
