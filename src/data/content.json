@@ -129,8 +129,8 @@
         "demo": null
       },
       "details": {
-        "overview": "Conducted bacterial and fungial identification through a systematic multi-step approach: differential Gram staining to classify cell wall structure, biochemical tests for species-level identification, slide culture technique to examine fungal colonies, and detailed macroscopic-microscopic morphological observation. All procedures followed established microbiological identification protocols.",
-        "challenge": "Accurate bacterial and fungial identification requires precise execution of multiple sequential techniques — errors in staining timing, reagent concentration, or incubation conditions can lead to misclassification. Colony counting demands consistency and proper dilution technique to obtain countable plates (30-300 colonies).",
+        "overview": "Conducted bacterial and fungal identification through a systematic multi-step approach: differential Gram staining to classify cell wall structure, biochemical tests for species-level identification, slide culture technique to examine fungal colonies, and detailed macroscopic-microscopic morphological observation. All procedures followed established microbiological identification protocols.",
+        "challenge": "Accurate bacterial and fungal identification requires precise execution of multiple sequential techniques — errors in staining timing, reagent concentration, or incubation conditions can lead to misclassification. Colony counting demands consistency and proper dilution technique to obtain countable plates (30-300 colonies).",
         "solution": "Followed strict timing protocol for each Gram staining step (crystal violet 60s, iodine mordant 60s, decolorizer 10-15s, safranin counterstain 45s). Performed duplicate slides and triplicate plates for result verification. Used proper serial dilution technique for colony counting and recorded all observations using standardized documentation sheets.",
         "results": [
           "Correctly classified bacteria into Gram-positive (purple) and Gram-negative (pink) groups",
