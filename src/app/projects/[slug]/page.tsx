@@ -38,7 +38,9 @@ export default function ProjectDetail() {
 
   const { details } = project;
   const isWeb = project.category === "Web Development";
-  const gallery = details.gallery || [];
+  const gallery = (details.gallery || []).map((item: string | { src: string; caption?: string }) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
@@ -92,27 +94,34 @@ export default function ProjectDetail() {
           {gallery.length > 0 && (
             <div className="sm:w-1/2 h-full flex flex-col rounded-2xl border border-border bg-muted/30 overflow-hidden">
               <p className="text-xs font-heading font-semibold text-muted-foreground uppercase tracking-wider px-4 pt-3 pb-2 shrink-0">
-                Gallery ({gallery.length})
+                Project Gallery ({gallery.length})
               </p>
               <div className="flex flex-col gap-2 overflow-y-auto flex-1 min-h-0 px-3 pb-3 scrollbar-thin">
-                {gallery.map((img, i) => (
+                {gallery.map((item, i) => (
                   <button
                     key={i}
                     type="button"
-                    className="group relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-border/60 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer bg-muted/40 shrink-0"
+                    className="group relative w-full rounded-lg overflow-hidden border border-border/60 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer bg-muted/40 shrink-0"
                     onClick={() => openLightbox(i)}
                   >
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-gradient-to-br from-primary/5 to-accent/5">
-                      <ImageIcon className="w-5 h-5 text-muted-foreground/30" />
-                      <span className="text-[10px] text-muted-foreground/40 font-sans">{i + 1}</span>
+                    <div className="aspect-[16/9] relative">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-gradient-to-br from-primary/5 to-accent/5">
+                        <ImageIcon className="w-5 h-5 text-muted-foreground/30" />
+                        <span className="text-[10px] text-muted-foreground/40 font-sans">{i + 1}</span>
+                      </div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={item.src}
+                        alt={item.caption || `${project.title} - ${i + 1}`}
+                        className="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                      />
                     </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={img}
-                      alt={`${project.title} - ${i + 1}`}
-                      className="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                    />
+                    {item.caption && (
+                      <p className="px-2.5 py-2 text-[11px] font-sans text-muted-foreground leading-snug text-left truncate">
+                        {item.caption}
+                      </p>
+                    )}
                   </button>
                 ))}
               </div>
@@ -248,8 +257,13 @@ export default function ProjectDetail() {
           )}
           <div className="max-w-5xl max-h-[85vh] px-16" onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={gallery[lightboxIndex]} alt={`${project.title} - ${lightboxIndex + 1}`} className="max-w-full max-h-[85vh] object-contain rounded-lg" />
-            <p className="text-center text-white/60 text-sm font-sans mt-3">{lightboxIndex + 1} / {gallery.length}</p>
+            <img src={gallery[lightboxIndex].src} alt={gallery[lightboxIndex].caption || `${project.title} - ${lightboxIndex + 1}`} className="max-w-full max-h-[85vh] object-contain rounded-lg" />
+            <p className="text-center text-white/60 text-sm font-sans mt-3">
+              {lightboxIndex + 1} / {gallery.length}
+              {gallery[lightboxIndex].caption && (
+                <span className="block text-white/80 mt-1">{gallery[lightboxIndex].caption}</span>
+              )}
+            </p>
           </div>
           {gallery.length > 1 && (
             <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 p-2 text-white/80 hover:text-white cursor-pointer z-10">

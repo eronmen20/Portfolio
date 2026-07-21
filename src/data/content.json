@@ -102,12 +102,12 @@
           "Sterile Petri Dishes"
         ],
         "gallery": [
-           "/images/projects/lab-culture/media.jpeg",
-          "/images/projects/lab-culture/aseptik.jpeg",
-          "/images/projects/lab-culture/Purifikasi.png",
-          "/images/projects/lab-culture/Purifikasi bakteri.jpeg",
-          "/images/projects/lab-culture/Isolasi.png",
-          "/images/projects/lab-culture/Spread-plate.png"
+          {"src": "/images/projects/lab-culture/media.jpeg", "caption": "NA/PDA media preparation — weighing and mixing agar components"},
+          {"src": "/images/projects/lab-culture/aseptik.jpeg", "caption": "Aseptic transfer technique using inoculation loop near Bunsen burner"},
+          {"src": "/images/projects/lab-culture/Purifikasi.png", "caption": "Pure culture isolation on nutrient agar plate"},
+          {"src": "/images/projects/lab-culture/Purifikasi bakteri.jpeg", "caption": "Bacterial purification — sub-culturing isolated colonies"},
+          {"src": "/images/projects/lab-culture/Isolasi.png", "caption": "Streak plate method — quadrant streak for single colony isolation"},
+          {"src": "/images/projects/lab-culture/Spread-plate.png", "caption": "Spread plate method for viable colony counting"}
         ]
       }
     },
@@ -155,12 +155,12 @@
           "Microscope Slides & Cover Slips"
         ],
         "gallery": [
-          "/images/projects/identifikasi/gram.jpeg",
-          "/images/projects/identifikasi/isolasi.jpeg",
-          "/images/projects/identifikasi/slide.jpeg",
-          "/images/projects/identifikasi/biokimia.jpeg", 
-          "/images/projects/identifikasi/fungi.jpeg",
-          "/images/projects/identifikasi/spora.jpeg"
+          {"src": "/images/projects/identifikasi/gram.jpeg", "caption": "Gram staining result — Gram-positive (purple) and Gram-negative (pink) bacteria"},
+          {"src": "/images/projects/identifikasi/isolasi.jpeg", "caption": "Bacterial isolation on selective media plate"},
+          {"src": "/images/projects/identifikasi/slide.jpeg", "caption": "Slide culture technique for fungal colony examination"},
+          {"src": "/images/projects/identifikasi/biokimia.jpeg", "caption": "Biochemical tests — catalase, citrate, and motility assays"},
+          {"src": "/images/projects/identifikasi/fungi.jpeg", "caption": "Macroscopic fungal colony characterization — color, texture, radial furrow"},
+          {"src": "/images/projects/identifikasi/spora.jpeg", "caption": "Microscopic spore observation under compound light microscope"}
         ]
       }
     },
@@ -214,9 +214,9 @@
           "Sample Bottles"
         ],
         "gallery": [
-          "/images/projects/water/tur.jpeg",
-          "/images/projects/water/ph.jpeg",
-          "/images/projects/water/ph-1.jpeg"
+          {"src": "/images/projects/water/tur.jpeg", "caption": "Turbidity measurement using turbidimeter — 33 NTU"},
+          {"src": "/images/projects/water/ph.jpeg", "caption": "pH measurement — neutral groundwater at pH 7"},
+          {"src": "/images/projects/water/ph-1.jpeg", "caption": "Universal pH indicator color comparison"}
         ]
       }
     },
@@ -250,10 +250,10 @@
           "Canva"
         ],
         "gallery": [
-          "/images/projects/bio-learning/screen-2.jpeg",
-          "/images/projects/bio-learning/screen-1.jpeg",
-          "/images/projects/bio-learning/screen-4.jpeg",
-          "/images/projects/bio-learning/screen-3.jpeg"
+          {"src": "/images/projects/bio-learning/screen-2.jpeg", "caption": "Tactile relief Javanese characters with Braille labels"},
+          {"src": "/images/projects/bio-learning/screen-1.jpeg", "caption": "Arduino-powered audio guidance module integration"},
+          {"src": "/images/projects/bio-learning/screen-4.jpeg", "caption": "Student interaction — exploring Javanese script through touch"},
+          {"src": "/images/projects/bio-learning/screen-3.jpeg", "caption": "Complete learning kit with 3D printed characters and audio module"}
         ]
       }
     },
@@ -292,8 +292,8 @@
           "VLOOKUP"
         ],
         "gallery": [
-          "/images/projects/dashboard/1.png",
-          "/images/projects/dashboard/das.png"
+          {"src": "/images/projects/dashboard/1.png", "caption": "Attendance records with automated percentage calculation"},
+          {"src": "/images/projects/dashboard/das.png", "caption": "Dashboard summary — department-wise attendance overview"}
         ]
       }
     },
@@ -335,9 +335,9 @@
           "Formula-Based Data Analysis"
         ],
         "gallery": [
-          "/images/projects/dashboard/S6.png",
-          "/images/projects/dashboard/S4.png",
-          "/images/projects/dashboard/S5.png"
+          {"src": "/images/projects/dashboard/S6.png", "caption": "Raw data cleaning using TRIM, LEFT, MID, RIGHT functions"},
+          {"src": "/images/projects/dashboard/S4.png", "caption": "Pivot Table — sales performance by country"},
+          {"src": "/images/projects/dashboard/S5.png", "caption": "Revenue calculation and continental sales summary"}
         ]
       }
     },
@@ -354,7 +354,7 @@
         "Framer Motion",
         "Zustand"
       ],
-      "image": "/images/projects/biolearn-app/landing page.png",
+      "image": "/images/projects/biolearn-app/landing-page.png",
       "links": {
         "github": "https://github.com/eronmen20/BioLearn",
         "demo": "https://bio-learn-iota.vercel.app/"
@@ -385,10 +385,10 @@
           "Lucide Icons"
         ],
         "gallery": [
-          "/images/projects/biolearn-app/home.png",
-          "/images/projects/biolearn-app/admin.png",
-          "/images/projects/biolearn-app/1.png",
-          "/images/projects/biolearn-app/2.png"
+          {"src": "/images/projects/biolearn-app/home.png", "caption": "Student dashboard — chapter-based learning system with progress tracking"},
+          {"src": "/images/projects/biolearn-app/admin.png", "caption": "Admin panel — content management and analytics dashboard"},
+          {"src": "/images/projects/biolearn-app/1.png", "caption": "Interactive flashcard with image hotspot mapping"},
+          {"src": "/images/projects/biolearn-app/2.png", "caption": "Bilingual praktikum viewer with step-by-step guidance"}
         ]
       }
     },
@@ -403,7 +403,7 @@
         "Tailwind CSS",
         "Framer Motion"
       ],
-      "image": "/images/projects/portfolio/thumb.svg",
+      "image": "/images/projects/personal-web/1.png",
       "links": {
         "github": "https://github.com/eronmen20/Portfolio",
         "demo": "https://portfolio-woad-two-81.vercel.app/"
@@ -425,10 +425,11 @@
           "Lucide Icons"
         ],
         "gallery": [
-          "/images/projects/portfolio/thumb.svg",
-          "/images/projects/portfolio/screen-1.svg",
-          "/images/projects/portfolio/screen-2.svg",
-          "/images/projects/portfolio/screen-3.svg"
+          {"src": "/images/projects/personal-web/2.png", "caption": "Hero section with animated gradient background"},
+          {"src": "/images/projects/personal-web/3.png", "caption": "Expertise cards with interactive hover effects"},
+          {"src": "/images/projects/personal-web/4.png", "caption": "Project portfolio grid with category filtering"},
+          {"src": "/images/projects/personal-web/5.png", "caption": "Project detail page with gallery lightbox"},
+          {"src": "/images/projects/personal-web/6.png", "caption": "Contact section with form and social links"}
         ]
       }
     }
