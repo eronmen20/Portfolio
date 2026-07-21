@@ -28,7 +28,7 @@
       "description": "An interactive e-learning platform for biology students featuring quizzes, simulations, and progress tracking.",
       "category": "Education",
       "tags": ["HTML", "CSS", "JavaScript", "Education"],
-      "image": "/images/projects/education-1.jpg",
+      "image": "/images/projects/education-1.svg",
       "links": {
         "github": null,
         "demo": null
@@ -44,7 +44,7 @@
         ],
         "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "Canvas API", "LocalStorage"],
         "gallery": [
-          "/images/projects/education-1.jpg"
+          "/images/projects/education-1.svg"
         ]
       }
     },
@@ -54,7 +54,7 @@
       "description": "Digital system for recording and managing microbiology laboratory results with automated analysis.",
       "category": "Research",
       "tags": ["Research", "Data Analysis", "Documentation"],
-      "image": "/images/projects/research-1.jpg",
+      "image": "/images/projects/research-1.svg",
       "links": {
         "github": null,
         "demo": null
@@ -70,7 +70,7 @@
         ],
         "technologies": ["Microsoft Excel", "VBA Macros", "Data Validation", "Pivot Tables", "Chart Generation"],
         "gallery": [
-          "/images/projects/research-1.jpg"
+          "/images/projects/research-1.svg"
         ]
       }
     },
@@ -80,7 +80,7 @@
       "description": "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
       "category": "Data Management",
       "tags": ["Excel", "Data Cleaning", "Visualization"],
-      "image": "/images/projects/data-1.jpg",
+      "image": "/images/projects/data-1.svg",
       "links": {
         "github": null,
         "demo": null
@@ -96,7 +96,7 @@
         ],
         "technologies": ["Microsoft Excel", "Power Query", "Pivot Charts", "Conditional Formatting", "VLOOKUP/INDEX-MATCH"],
         "gallery": [
-          "/images/projects/data-1.jpg"
+          "/images/projects/data-1.svg"
         ]
       }
     },
@@ -106,7 +106,7 @@
       "description": "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
       "category": "Web Development",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "image": "/images/projects/web-1.jpg",
+      "image": "/images/projects/web-1.svg",
       "links": {
         "github": "https://github.com/yourusername/portfolio",
         "demo": "https://your-portfolio.vercel.app"
@@ -123,7 +123,7 @@
         ],
         "technologies": ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Lucide Icons"],
         "gallery": [
-          "/images/projects/web-1.jpg"
+          "/images/projects/web-1.svg"
         ]
       }
     },
@@ -133,7 +133,7 @@
       "description": "Comprehensive teaching materials for scientific writing workshops targeting undergraduate students.",
       "category": "Education",
       "tags": ["Teaching", "Scientific Writing", "Materials"],
-      "image": "/images/projects/education-2.jpg",
+      "image": "/images/projects/education-2.svg",
       "links": {
         "github": null,
         "demo": null
@@ -149,7 +149,7 @@
         ],
         "technologies": ["Microsoft Word", "Google Slides", "Canva", "Academic Templates"],
         "gallery": [
-          "/images/projects/education-2.jpg"
+          "/images/projects/education-2.svg"
         ]
       }
     },
@@ -159,7 +159,7 @@
       "description": "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
       "category": "Web Development",
       "tags": ["Web App", "Database", "Laboratory"],
-      "image": "/images/projects/web-2.jpg",
+      "image": "/images/projects/web-2.svg",
       "links": {
         "github": "https://github.com/yourusername/sample-tracker",
         "demo": "https://sample-tracker.vercel.app"
@@ -175,7 +175,7 @@
         ],
         "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage", "JSON", "Responsive Design"],
         "gallery": [
-          "/images/projects/web-2.jpg"
+          "/images/projects/web-2.svg"
         ]
       }
     }

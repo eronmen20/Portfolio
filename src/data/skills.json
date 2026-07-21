@@ -28,7 +28,7 @@
       "date": "2024",
       "description": "Comprehensive laboratory safety and hazard management certification.",
       "credential": "#",
-      "image": "/images/certs/cert-1.jpg"
+      "image": "/images/certs/cert-1.svg"
     },
     {
       "title": "Scientific Writing Workshop",
@@ -36,7 +36,7 @@
       "date": "2023",
       "description": "Advanced scientific writing and research paper composition.",
       "credential": "#",
-      "image": "/images/certs/cert-2.jpg"
+      "image": "/images/certs/cert-2.svg"
     },
     {
       "title": "Web Development Bootcamp",
@@ -44,7 +44,7 @@
       "date": "2024",
       "description": "Full-stack web development fundamentals with modern technologies.",
       "credential": "#",
-      "image": "/images/certs/cert-3.jpg"
+      "image": "/images/certs/cert-3.svg"
     },
     {
       "title": "Data Analysis with Excel",
@@ -52,7 +52,7 @@
       "date": "2023",
       "description": "Advanced data analysis, visualization, and reporting techniques.",
       "credential": "#",
-      "image": "/images/certs/cert-4.jpg"
+      "image": "/images/certs/cert-4.svg"
     },
     {
       "title": "Microbiology Techniques",
@@ -60,7 +60,7 @@
       "date": "2023",
       "description": "Hands-on microbiology laboratory techniques and procedures.",
       "credential": "#",
-      "image": "/images/certs/cert-5.jpg"
+      "image": "/images/certs/cert-5.svg"
     },
     {
       "title": "Google IT Support Certificate",
@@ -68,7 +68,7 @@
       "date": "2024",
       "description": "IT support fundamentals including networking, security, and troubleshooting.",
       "credential": "#",
-      "image": "/images/certs/cert-6.jpg"
+      "image": "/images/certs/cert-6.svg"
     }
   ]
 }
