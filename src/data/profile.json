@@ -1,15 +1,15 @@
 {
-  "name": "Your Name",
-  "tagline": "Biology Education Graduate | Research & Laboratory | Data Management | Web Developer",
+  "name": "Aeryn Deswita Kussikanto",
+  "tagline": "Biology Education Graduate | Research & Laboratory Enthusiast| Data Management | Web Developer",
   "description": "Passionate about bridging science and technology. With a strong foundation in biology education, hands-on laboratory experience, and growing expertise in web development, I bring a unique multidisciplinary perspective to every project.",
-  "photo": "/images/profile.svg",
+  "photo": "/images/projects/portfolio/foto.jpg",
   "cvFile": "/files/cv.pdf",
   "status": "Available for Opportunities",
   "education": {
-    "degree": "S.Pd. Biology Education",
-    "university": "Your University Name",
-    "gpa": "3.XX / 4.00",
-    "year": "2020 - 2024"
+    "degree": "Bachelor of Biology Education",
+    "university": "Universitas Negeri Yogyakarta",
+    "gpa": "3.90 / 4.00",
+    "year": "2022 - 2026"
   },
   "location": "Indonesia",
   "relocation": "Open to relocation",

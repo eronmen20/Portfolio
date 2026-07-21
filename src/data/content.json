@@ -3,79 +3,258 @@
     {
       "title": "Education",
       "description": "Passionate about teaching and creating engaging learning experiences that make complex biological concepts accessible.",
-      "skills": ["Teaching", "Learning Material Development", "Scientific Communication", "Educational Media", "Mentoring"]
+      "skills": [
+        "Teaching",
+        "Learning Material Development",
+        "Scientific Communication",
+        "Educational Media",
+        "Classroom Management",
+        "Lesson Planning"
+      ]
     },
     {
       "title": "Research & Laboratory",
       "description": "Hands-on experience in laboratory management, sample analysis, and scientific research with attention to quality control.",
-      "skills": ["Laboratory Management", "Sample Preparation", "Hematology", "Microbiology", "Biotechnology", "Quality Control", "Scientific Reporting"]
+      "skills": [
+        "Laboratory Management",
+        "Sample Preparation",
+        "Basic Bioinformatics Analysis",
+        "Microbiology",
+        "Biotechnology",
+        "Quality Control",
+        "Scientific Reporting",
+        "Laboratory Occupational Health and Safety"
+      ]
     },
     {
       "title": "Data Management",
       "description": "Skilled in organizing, cleaning, and managing data with precision. Experienced in administrative support and documentation.",
-      "skills": ["Data Entry", "Data Cleaning", "Excel", "Documentation", "Database Management", "Report Preparation", "Digital Organization"]
+      "skills": [
+        "Data Entry",
+        "Data Cleaning",
+        "Data Visualization",
+        "Excel",
+        "Documentation",
+        "Database Management",
+        "Report Preparation",
+        "Digital Organization"
+      ]
     },
     {
       "title": "Web Development",
       "description": "Building modern, responsive web applications with clean code and intuitive user interfaces.",
-      "skills": ["HTML", "CSS", "JavaScript", "Responsive Design", "Git", "GitHub", "UI Design", "Frontend Development"]
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design",
+        "Git",
+        "GitHub",
+        "UI Design",
+        "Frontend Development"
+      ]
     }
   ],
   "projects": [
     {
-      "slug": "biology-learning-module",
-      "title": "Interactive Biology Learning Module",
-      "description": "An interactive e-learning platform for biology students featuring quizzes, simulations, and progress tracking.",
-      "category": "Education",
-      "tags": ["HTML", "CSS", "JavaScript", "Education"],
-      "image": "/images/projects/bio-learning/thumb.svg",
+      "slug": "microbiology-culture-technique",
+      "title": "Microbiology Lab: Microbial Culture & Aseptic Technique",
+      "description": "Hands-on experience in media preparation, equipment sterilization, bacterial inoculation, and controlled incubation following standard laboratory protocols.",
+      "category": "Laboratory Experience",
+      "tags": [
+        "Media Preparation",
+        "Sterilization",
+        "Inoculation",
+        "Incubation",
+        "Aseptic Technique"
+      ],
+      "image": "/images/projects/lab-culture/autoclave.png",
       "links": {
         "github": null,
         "demo": null
       },
       "details": {
-        "overview": "Designed and developed an interactive e-learning platform aimed at biology students. The platform features adaptive quizzes, visual simulations of biological processes, and a comprehensive progress tracking system.",
-        "challenge": "Traditional biology learning materials were static and unengaging. Students struggled to visualize complex biological processes like cell division, photosynthesis, and DNA replication.",
-        "solution": "Built an interactive web application with animated simulations that break down complex processes into digestible steps. Added adaptive quizzes that adjust difficulty based on student performance.",
+        "overview": "Conducted comprehensive microbiology laboratory procedures including NA/PDA media preparation, autoclave sterilization, aseptic bacterial inoculation using pour plate, streak plate, spread plate methods, and controlled incubation for bacterial growth. All procedures followed standardized operating protocols (SOP) with emphasis on aseptic technique and laboratory safety.",
+        "challenge": "Maintaining sterility throughout the entire workflow is critical — any contamination from airborne particles, improper technique, or unsterilized equipment can compromise results and waste laboratory resources.",
+        "solution": "Implemented strict aseptic workflow: flame sterilization of inoculation loops, work within Bunsen burner aseptic zone, proper labeling and timing of each step, and parallel control plates to verify sterility. Developed systematic quadrant streak plate patterns for optimal single colony isolation.",
+        "results": [
+          "Successfully prepared nutrient agar (NA), potato dextrose agar (PDA), and broth media",
+          "Achieved consistent aseptic technique with zero contamination in negative control plates",
+          "Obtained isolated single colonies suitable for pure culture transfer and further analysis",
+          "Properly documented incubation parameters"
+        ],
+        "techniques": [
+          "NA/PDA Media Preparation (Agar & Broth)",
+          "Autoclave Sterilization (121°C, 15 psi, 15 min)",
+          "Aseptic Transfer Technique",
+          "Streak Plate Method (Quadrant Streak)",
+          "Spread Plate Method",
+          "Pour Plate Method",
+          "Pure Culture Maintenance",
+          "Incubator Temperature & Time Management"
+        ],
+        "tools": [
+          "Autoclave",
+          "Bunsen Burner",
+          "Inoculation Loop & Needle",
+          "Incubator",
+          "Analytical Balance",
+          "Sterile Petri Dishes"
+        ],
+        "gallery": [
+           "/images/projects/lab-culture/media.jpeg",
+          "/images/projects/lab-culture/aseptik.jpeg",
+          "/images/projects/lab-culture/Purifikasi.png",
+          "/images/projects/lab-culture/Purifikasi bakteri.jpeg",
+          "/images/projects/lab-culture/Isolasi.png",
+          "/images/projects/lab-culture/Spread-plate.png"
+        ]
+      }
+    },
+    {
+      "slug": "bacterial-identification-analysis",
+      "title": "Microbial Identification & Morphological Analysis",
+      "description": "Performed comprehensive macroscopic-microscopic bacterial and fungal characterization.",
+      "category": "Laboratory Experience",
+      "tags": [
+        "Gram Staining",
+        "Biochemical Test",
+        "Slide Culture Technique",
+        "Microscopy",
+        "Microbial Identification"
+      ],
+      "image": "/images/projects/identifikasi/Mold.jpeg",
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "details": {
+        "overview": "Conducted bacterial and fungial identification through a systematic multi-step approach: differential Gram staining to classify cell wall structure, biochemical tests for species-level identification, slide culture technique to examine fungal colonies, and detailed macroscopic-microscopic morphological observation. All procedures followed established microbiological identification protocols.",
+        "challenge": "Accurate bacterial and fungial identification requires precise execution of multiple sequential techniques — errors in staining timing, reagent concentration, or incubation conditions can lead to misclassification. Colony counting demands consistency and proper dilution technique to obtain countable plates (30-300 colonies).",
+        "solution": "Followed strict timing protocol for each Gram staining step (crystal violet 60s, iodine mordant 60s, decolorizer 10-15s, safranin counterstain 45s). Performed duplicate slides and triplicate plates for result verification. Used proper serial dilution technique for colony counting and recorded all observations using standardized documentation sheets.",
+        "results": [
+          "Correctly classified bacteria into Gram-positive (purple) and Gram-negative (pink) groups",
+          "Identified cell morphology: cocci, bacilli, and arrangements (chains, clusters, diplococci)",
+          "Identified fungi macroscopic characteristics: color, texture, radial furrow, growing zone, etc",
+          "Successfully correlated macroscopic colony characteristics with microscopic observations",
+          "Documented complete identification workflow with photographic evidence"
+        ],
+        "techniques": [
+          "Gram Staining (Crystal Violet, Iodine, Decolorizer, Safranin)",
+          "Biochemical Tests (Catalase, Starch hydrolysis test, Simmons Citrate (SCA), Motility)",
+          "Slide Culture",
+          "Macroscopic Colony Characterization (size, shape, margin, elevation, color, texture)",
+          "Microscopic Observation",
+          "Photomicrography Documentation"
+        ],
+        "tools": [
+          "Compound Light Microscope",
+          "Gram Staining Reagent Kit",
+          "Biochemical Test Kits",
+          "Vortex Mixer",
+          "Microscope Slides & Cover Slips"
+        ],
+        "gallery": [
+          "/images/projects/identifikasi/gram.jpeg",
+          "/images/projects/identifikasi/isolasi.jpeg",
+          "/images/projects/identifikasi/slide.jpeg",
+          "/images/projects/identifikasi/biokimia.jpeg", 
+          "/images/projects/identifikasi/fungi.jpeg",
+          "/images/projects/identifikasi/spora.jpeg"
+        ]
+      }
+    },
+    {
+      "slug": "water-quality-analysis",
+      "title": "Water Quality Analysis & Environmental Monitoring",
+      "description": "Conducted comprehensive water quality assessment including sample collection, preparation, and analysis of pH, TSS, BOD, and turbidity parameters.",
+      "category": "Laboratory Experience",
+      "tags": [
+        "Water Analysis",
+        "pH Testing",
+        "TSS",
+        "BOD",
+        "Turbidity",
+        "Environmental Monitoring"
+      ],
+      "image": "/images/projects/water/do.jpeg",
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "details": {
+        "overview": "Conducted water quality assessment by collecting groundwater samples and analyzing key physical and chemical parameters, including Dissolved Oxygen (DO), Total Suspended Solids (TSS), pH, temperature, and turbidity. Performed laboratory measurements, data recording, result interpretation, and comparison with environmental quality standards.",
+        "challenge": "Groundwater quality is influenced by multiple physical and chemical parameters. Accurate sample collection, instrument operation, and data interpretation were required to evaluate overall water quality and identify potential environmental concerns.",
+        "solution": "Collected water samples following laboratory instructions, measured DO, TSS, pH, temperature, and turbidity using appropriate laboratory instruments, documented analytical results, and evaluated water quality based on established environmental standards.",
+        "results": [
+          "Measured Dissolved Oxygen (DO) of well water at 4.75 mg/L, indicating dissolved oxygen below the recommended value for Class I water quality.",
+          "Calculated Total Suspended Solids (TSS) at 100 mg/L using the gravimetric method, meeting the reference range for raw drinking water.",
+          "Recorded water temperature of 30°C, indicating a relatively high temperature compared to the normal groundwater range.",
+          "Measured turbidity at 33 NTU, exceeding the Indonesian drinking water turbidity standard (25 NTU).",
+          "Determined water pH of 7, indicating neutral groundwater conditions.",
+          "Documented and interpreted laboratory findings by comparing measured values with environmental quality standards."
+        ],
+        "techniques": [
+          "Water Sampling",
+          "pH Measurement",
+          "Total Suspended Solids (TSS) Gravimetric Analysis",
+          "Dissolved Oxygen (DO) Meter Method",
+          "Temperature Measurement",
+          "Turbidity Measurement",
+          "Data Recording & Result Interpretation"
+        ],
+        "tools": [
+          "pH Meter",
+          "Turbidimeter",
+          "Dissolved Oxygen (DO) Meter",
+          "Universal pH Indicator",
+          "Drying Oven",
+          "Thermometer",
+          "Filter Paper",
+          "Sample Bottles"
+        ],
+        "gallery": [
+          "/images/projects/water/tur.jpeg",
+          "/images/projects/water/ph.jpeg",
+          "/images/projects/water/ph-1.jpeg"
+        ]
+      }
+    },
+   
+    {
+      "slug": "biology-learning-module",
+      "title": "Repin Aja-Relief Pintar Aksara Jawa",
+      "description": "REPIN AJA (Relief Pintar Aksara Jawa) is an inclusive educational innovation designed to help visually impaired students learn Javanese script through tactile relief characters, Braille, and audio guidance. The project integrates educational technology with cultural preservation to create an accessible and interactive learning experience.",
+      "category": "Education",
+      "tags": [
+        "Learning Media",
+        "Learning Module",
+        "Visually Impaired Students"
+      ],
+      "image": "/images/projects/bio-learning/thumb.jpeg",
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "details": {
+        "overview": "Contributed to the development of REPIN AJA (Relief Pintar Aksara Jawa), an inclusive educational learning media designed to help visually impaired students learn Javanese script through tactile relief characters, Braille, and audio-based interactions. Responsible for project planning, educational content development, implementation, user training, and program evaluation to enhance Javanese script literacy while supporting inclusive education and cultural preservation.",
+        "challenge": "Visually impaired students have limited access to learning media for Javanese script, as conventional teaching materials rely heavily on visual instruction. This creates barriers to understanding and reduces opportunities to engage with local cultural education.",
+        "solution": "Developed a multisensory learning medium that integrates embossed Javanese characters, Braille labels, and Arduino-powered audio guidance. The interactive design enables students to explore Javanese script independently through touch and sound, making the learning experience more accessible and engaging.",
         "results": [
           "Improved student engagement by 40% compared to traditional materials",
           "Quiz completion rate increased from 60% to 95%",
           "Students reported better understanding of complex biological concepts"
         ],
-        "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "Canvas API", "LocalStorage"],
-        "gallery": [
-          "/images/projects/bio-learning/thumb.svg",
-          "/images/projects/bio-learning/screen-1.svg",
-          "/images/projects/bio-learning/screen-2.svg",
-          "/images/projects/bio-learning/screen-3.svg"
-        ]
-      }
-    },
-    {
-      "slug": "microbiology-lab-report",
-      "title": "Microbiology Lab Report System",
-      "description": "Digital system for recording and managing microbiology laboratory results with automated analysis.",
-      "category": "Research",
-      "tags": ["Research", "Data Analysis", "Documentation"],
-      "image": "/images/projects/micro-lab/thumb.svg",
-      "links": {
-        "github": null,
-        "demo": null
-      },
-      "details": {
-        "overview": "Developed a digital laboratory report system for microbiology research. The system streamlines recording sample data, performing automated analysis, and generating comprehensive research reports.",
-        "challenge": "Laboratory reports were handwritten, prone to errors, and difficult to organize. Searching for historical data was time-consuming.",
-        "solution": "Created a structured digital system with standardized input forms, automated calculations, and searchable database.",
-        "results": [
-          "Reduced report generation time by 60%",
-          "Eliminated handwriting errors in data recording",
-          "Enabled instant search across 500+ historical records"
+        "technologies": [
+          "Arduino UNO",
+          "3D Print",
+          "Canva"
         ],
-        "technologies": ["Microsoft Excel", "VBA Macros", "Data Validation", "Pivot Tables", "Chart Generation"],
         "gallery": [
-          "/images/projects/micro-lab/thumb.svg",
-          "/images/projects/micro-lab/screen-1.svg",
-          "/images/projects/micro-lab/screen-2.svg"
+          "/images/projects/bio-learning/screen-2.jpeg",
+          "/images/projects/bio-learning/screen-1.jpeg",
+          "/images/projects/bio-learning/screen-4.jpeg",
+          "/images/projects/bio-learning/screen-3.jpeg"
         ]
       }
     },
@@ -84,7 +263,11 @@
       "title": "Student Performance Dashboard",
       "description": "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
       "category": "Data Management",
-      "tags": ["Excel", "Data Cleaning", "Visualization"],
+      "tags": [
+        "Excel",
+        "Data Cleaning",
+        "Visualization"
+      ],
       "image": "/images/projects/dashboard/thumb.svg",
       "links": {
         "github": null,
@@ -99,7 +282,13 @@
           "Reduced data processing time from 2 hours to 15 minutes",
           "Enabled early identification of at-risk students"
         ],
-        "technologies": ["Microsoft Excel", "Power Query", "Pivot Charts", "Conditional Formatting", "VLOOKUP"],
+        "technologies": [
+          "Microsoft Excel",
+          "Power Query",
+          "Pivot Charts",
+          "Conditional Formatting",
+          "VLOOKUP"
+        ],
         "gallery": [
           "/images/projects/dashboard/thumb.svg",
           "/images/projects/dashboard/screen-1.svg",
@@ -112,7 +301,12 @@
       "title": "Personal Portfolio Website",
       "description": "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
       "category": "Web Development",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
       "image": "/images/projects/portfolio/thumb.svg",
       "links": {
         "github": "https://github.com/yourusername/portfolio",
@@ -127,7 +321,13 @@
           "Fully responsive from 375px to 1440px+",
           "Dark mode support with system preference detection"
         ],
-        "technologies": ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Lucide Icons"],
+        "technologies": [
+          "Next.js 16",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "Framer Motion",
+          "Lucide Icons"
+        ],
         "gallery": [
           "/images/projects/portfolio/thumb.svg",
           "/images/projects/portfolio/screen-1.svg",
@@ -137,38 +337,15 @@
       }
     },
     {
-      "slug": "scientific-writing-workshop",
-      "title": "Scientific Writing Workshop Materials",
-      "description": "Comprehensive teaching materials for scientific writing workshops targeting undergraduate students.",
-      "category": "Education",
-      "tags": ["Teaching", "Scientific Writing", "Materials"],
-      "image": "/images/projects/writing-workshop/thumb.svg",
-      "links": {
-        "github": null,
-        "demo": null
-      },
-      "details": {
-        "overview": "Developed a complete set of teaching materials for a scientific writing workshop aimed at undergraduate biology students.",
-        "challenge": "Undergraduate students lacked structured guidance on scientific writing.",
-        "solution": "Created a step-by-step curriculum with practical exercises, templates, checklists, and real-world examples.",
-        "results": [
-          "Workshop attended by 100+ students across 3 sessions",
-          "Student paper submission rate increased by 35%",
-          "Materials adopted by 2 other departments"
-        ],
-        "technologies": ["Microsoft Word", "Google Slides", "Canva", "Academic Templates"],
-        "gallery": [
-          "/images/projects/writing-workshop/thumb.svg",
-          "/images/projects/writing-workshop/screen-1.svg"
-        ]
-      }
-    },
-    {
       "slug": "sample-tracker",
       "title": "Sample Tracking Application",
       "description": "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
       "category": "Web Development",
-      "tags": ["Web App", "Database", "Laboratory"],
+      "tags": [
+        "Web App",
+        "Database",
+        "Laboratory"
+      ],
       "image": "/images/projects/sample-tracker/thumb.svg",
       "links": {
         "github": "https://github.com/yourusername/sample-tracker",
@@ -183,7 +360,14 @@
           "Reduced average processing time by 45%",
           "Real-time visibility into 200+ active samples"
         ],
-        "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage", "JSON", "Responsive Design"],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "LocalStorage",
+          "JSON",
+          "Responsive Design"
+        ],
         "gallery": [
           "/images/projects/sample-tracker/thumb.svg",
           "/images/projects/sample-tracker/screen-1.svg",

@@ -103,6 +103,21 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, var(--primary-dark), var(--accent-dark));
 }
 
+/* Thin scrollbar for gallery */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
 /* Glassmorphism utility */
 .glass {
   background: var(--glass);

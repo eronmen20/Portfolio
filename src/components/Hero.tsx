@@ -98,6 +98,7 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
+              {/* CV button — hidden for now
               <a
                 href={profile.cvFile}
                 download
@@ -106,6 +107,7 @@ export default function Hero() {
                 <Download className="w-4 h-4" />
                 Download CV
               </a>
+              */}
               <a
                 href="#portfolio"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-border text-foreground font-medium hover:bg-muted hover:border-violet-300 dark:hover:border-violet-700 transition-all hover:-translate-y-0.5"

@@ -20,8 +20,8 @@ const infoCards = [
   {
     icon: Briefcase,
     label: "Career Interests",
-    value: profile.careerInterests.slice(0, 3).join(", "),
-    detail: profile.careerInterests.slice(3).join(", ") || "",
+    value: profile.careerInterests.slice(0, 6).join(", "),
+
   },
   {
     icon: Heart,
