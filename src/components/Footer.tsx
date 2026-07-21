@@ -112,8 +112,7 @@ export default function Footer() {
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Built with{" "}
-            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> using
-            Next.js & Tailwind CSS
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> by Aeryn
           </p>
         </div>
       </div>

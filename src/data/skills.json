@@ -2,11 +2,11 @@
   "categories": [
     {
       "title": "Laboratory Skills",
-      "skills": ["Microbiology", "Biotechnology", "Laboratory Management", "Scientific Writing", "Sample Preparation", "Hematology", "Quality Control"]
+      "skills": ["Microbiology", "Biotechnology", "Laboratory Management", "Scientific Writing", "Sample Preparation", "K3 Laboratorium", "SOP Implementation"]
     },
     {
       "title": "Research Skills",
-      "skills": ["Literature Review", "Research Design", "Data Analysis", "Report Writing", "Research Methodology", "Peer Review"]
+      "skills": ["Literature Review", "Research Design", "Data Analysis", "Report Writing", "Research Methodology", "Peer Review", "IBM SPSS"]
     },
     {
       "title": "Data Management",
@@ -18,57 +18,41 @@
     },
     {
       "title": "Soft Skills",
-      "skills": ["Communication", "Problem Solving", "Leadership", "Teamwork", "Time Management", "Critical Thinking", "Adaptability"]
+      "skills": ["Communication", "Problem Solving", "Leadership", "Teamwork", "Time Management", "Analytical Thinking", "Adaptability"]
     }
   ],
   "certifications": [
     {
-      "title": "Laboratory Safety Certification",
-      "issuer": "Health & Safety Institute",
-      "date": "2024",
-      "description": "Comprehensive laboratory safety and hazard management certification.",
+      "title": "Teaching Certificate",
+      "issuer": "Yogyakarta State University",
+      "date": "2026",
+      "description": "Demonstrated pedagogical competencies in planning, delivering, and evaluating effective learning activities. Skilled in classroom management, instructional design, and applying learner-centered teaching strategies.",
       "credential": "#",
-      "image": "/images/certs/cert-1.svg"
+      "image": "/images/certs/teaching.jpeg"
     },
     {
-      "title": "Scientific Writing Workshop",
-      "issuer": "University Research Center",
-      "date": "2023",
-      "description": "Advanced scientific writing and research paper composition.",
+      "title": "Microsoft Excel Professional",
+      "issuer": "Coursera",
+      "date": "2026",
+      "description": "Developed advanced Excel skills in data processing, data cleaning, visualization through charts and dashboards, and basic Macro and VBA programming.",
       "credential": "#",
-      "image": "/images/certs/cert-2.svg"
+      "image": "/images/certs/excel.jpeg"
     },
     {
-      "title": "Web Development Bootcamp",
-      "issuer": "Online Learning Platform",
-      "date": "2024",
-      "description": "Full-stack web development fundamentals with modern technologies.",
+      "title": "Web Development Fundamentals",
+      "issuer": "IBM SkillsBuild",
+      "date": "2026",
+      "description": "Covered full-stack web development fundamentals including HTML, CSS, JavaScript, responsive design principles, and version control with Git. Completed hands-on labs building and deploying basic web applications.",
       "credential": "#",
-      "image": "/images/certs/cert-3.svg"
+      "image": "/images/certs/web-dev.png"
     },
     {
-      "title": "Data Analysis with Excel",
-      "issuer": "Professional Development Institute",
-      "date": "2023",
-      "description": "Advanced data analysis, visualization, and reporting techniques.",
+      "title": "Front-End Web Development",
+      "issuer": "IBM SkillsBuild",
+      "date": "2026",
+      "description": "Demonstrated advanced web development skills in HTML, CSS, and JavaScript to build interactive web applications. Proficient in applying software engineering principles, JavaScript error handling, Command Line Interface (CLI) tools, and essential professional workplace practices.",
       "credential": "#",
-      "image": "/images/certs/cert-4.svg"
-    },
-    {
-      "title": "Microbiology Techniques",
-      "issuer": "Biology Department",
-      "date": "2023",
-      "description": "Hands-on microbiology laboratory techniques and procedures.",
-      "credential": "#",
-      "image": "/images/certs/cert-5.svg"
-    },
-    {
-      "title": "Google IT Support Certificate",
-      "issuer": "Google via Coursera",
-      "date": "2024",
-      "description": "IT support fundamentals including networking, security, and troubleshooting.",
-      "credential": "#",
-      "image": "/images/certs/cert-6.svg"
+      "image": "/images/certs/front.png"
     }
   ]
 }

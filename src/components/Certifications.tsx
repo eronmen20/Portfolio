@@ -56,30 +56,32 @@ export default function Certifications() {
                   className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${accent}`}
                 />
 
-                {/* Certificate image placeholder */}
+                {/* Certificate image */}
                 {cert.image && cert.image !== "" && (
-                  <div className={`w-full h-32 rounded-xl bg-gradient-to-br ${accent} opacity-10 mb-4 overflow-hidden flex items-center justify-center`}>
+                  <div className="w-full h-40 rounded-xl overflow-hidden mb-4 border border-border/50">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="w-full h-full object-cover opacity-90"
+                      className="w-full h-full object-cover"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = "none";
                         const parent = target.parentElement;
                         if (parent) {
-                          parent.innerHTML = `<div class="flex items-center justify-center w-full h-full"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>`;
+                          parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-muted/50"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted-foreground)"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>`;
                         }
                       }}
                     />
                   </div>
                 )}
 
-                {/* Certificate icon with gradient */}
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${accent} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md`}>
-                  <Award className="w-7 h-7 text-white" />
-                </div>
+                {/* Certificate icon — only if no image */}
+                {(!cert.image || cert.image === "") && (
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${accent} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md`}>
+                    <Award className="w-7 h-7 text-white" />
+                  </div>
+                )}
 
                 <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                   {cert.title}

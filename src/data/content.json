@@ -252,7 +252,7 @@
         "gallery": [
           {"src": "/images/projects/bio-learning/screen-2.jpeg", "caption": "Tactile relief Javanese characters with Braille labels"},
           {"src": "/images/projects/bio-learning/screen-1.jpeg", "caption": "Arduino-powered audio guidance module integration"},
-          {"src": "/images/projects/bio-learning/screen-4.jpeg", "caption": "Language Translation Button (Indonesia and Javanese"},
+          {"src": "/images/projects/bio-learning/screen-4.jpeg", "caption": "Language Translation Button (Indonesia and Javanese)"},
           {"src": "/images/projects/bio-learning/screen-3.jpeg", "caption": "Power Buttton and Port Charger"}
         ]
       }
