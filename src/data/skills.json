@@ -55,44 +55,44 @@
       "image": "/images/certs/front.png"
     },
     {
-      "title":  "Finalist - 37th National Student Scientific Week (PIMNAS)", 
-      "issuer": "BPTI, Puspernas, Kemendikbudristek", 
-      "date": "2024",
-      "description": "Recognized as a finalist for presenting an innovative research/project at the national level, demonstrating competencies in research, scientific writing, problem-solving, and presentation.",
-      "credential":"#",
-      "image": "/images/certs/pimnas.png"
-    }, 
-    {
-      "title": "Semifinalist - Southeast Asia MIPA Road to Scientific Paper Competition (MARS#10)", 
-      "issuer": "Mathematics and Natural Science Research Group", 
-      "date": "2023",
-      "description": "Achieved semifinalist recognition in a Southeast Asian Scientific Writing Competition organized by KSI MIST UNY, leading a team in developing and presenting an innovative research paper.",
-      "credential": "#",
-      "image":"/images/certs/mars.png"
-    }, 
-    {
-      "title": "Outstanding Student Award - Scientific Reasoning Category", 
+      "title": "Outstanding Student Award - Scientific Reasoning Category",
       "issuer": "Yogyakarta State University",
-      "date": "2025", 
+      "date": "2025",
       "description": "Awarded Outstanding Student in the Scientific Reasoning Category at Universitas Negeri Yogyakarta (2025) for excellence in research, critical thinking, and academic achievements.",
       "credential": "#",
       "image": "/images/certs/mapres1.png"
     },
     {
       "title": "Research Team Member - Basic Health Technology Research Group",
-      "issuer": "Faculty of Medicine, Yogyakarta State University", 
+      "issuer": "Faculty of Medicine, Yogyakarta State University",
       "date": "2025",
       "description": "Contributed to a research study on hepatitis immunity among athletes in UNY by managing participant data, conducting health assessments, assisting sample processing, and supporting research operations.",
       "credential": "#",
       "image": "/images/certs/research.jpeg"
     },
     {
+      "title": "Finalist - 37th National Student Scientific Week (PIMNAS)",
+      "issuer": "BPTI, Puspernas, Kemendikbudristek",
+      "date": "2024",
+      "description": "Recognized as a finalist for presenting an innovative research/project at the national level, demonstrating competencies in research, scientific writing, problem-solving, and presentation.",
+      "credential": "#",
+      "image": "/images/certs/pimnas.png"
+    },
+    {
       "title": "PKM Award 2024 - Student Creativity Program (PKM)",
-      "issuer": "Directorate of Learning and Student Affairs (Belmawa), Kemendikbudristek", 
+      "issuer": "Directorate of Learning and Student Affairs (Belmawa), Kemendikbudristek",
       "date": "2024",
       "description": "Awarded funding through the 2024 Student Creativity Program (PKM) for a community empowerment project focused on technology-based literacy and Arduino implementation at SLB-A Yaketunis Yogyakarta.",
       "credential": "#",
       "image": "/images/certs/pkm.png"
+    },
+    {
+      "title": "Semifinalist - Southeast Asia MIPA Road to Scientific Paper Competition (MARS#10)",
+      "issuer": "Mathematics and Natural Science Research Group",
+      "date": "2023",
+      "description": "Achieved semifinalist recognition in a Southeast Asian Scientific Writing Competition organized by KSI MIST UNY, leading a team in developing and presenting an innovative research paper.",
+      "credential": "#",
+      "image": "/images/certs/mars.png"
     }
   ]
 }
