@@ -102,10 +102,10 @@
           "Sterile Petri Dishes"
         ],
         "gallery": [
-          {"src": "/images/projects/lab-culture/media.jpeg", "caption": "NA/PDA media preparation — weighing and mixing agar components"},
+          {"src": "/images/projects/lab-culture/media.jpeg", "caption": "NA/PDA media preparation"},
           {"src": "/images/projects/lab-culture/aseptik.jpeg", "caption": "Aseptic transfer technique using inoculation loop near Bunsen burner"},
           {"src": "/images/projects/lab-culture/Purifikasi.png", "caption": "Pure culture isolation on nutrient agar plate"},
-          {"src": "/images/projects/lab-culture/Purifikasi bakteri.jpeg", "caption": "Bacterial purification — sub-culturing isolated colonies"},
+          {"src": "/images/projects/lab-culture/Purifikasi bakteri.jpeg", "caption": "Fungial purification — sub-culturing isolated colonies"},
           {"src": "/images/projects/lab-culture/Isolasi.png", "caption": "Streak plate method — quadrant streak for single colony isolation"},
           {"src": "/images/projects/lab-culture/Spread-plate.png", "caption": "Spread plate method for viable colony counting"}
         ]
