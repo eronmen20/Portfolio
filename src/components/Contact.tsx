@@ -28,12 +28,13 @@ const contactInfo = [
     value: contactData.email,
     href: `mailto:${contactData.email}`,
   },
-  {
-    icon: LinkedinIcon,
-    label: "LinkedIn",
-    value: contactData.linkedin.replace("https://", ""),
-    href: contactData.linkedin !== "#" ? contactData.linkedin : null,
-  },
+  // LinkedIn hidden — profile not ready yet
+  // {
+  //   icon: LinkedinIcon,
+  //   label: "LinkedIn",
+  //   value: contactData.linkedin.replace("https://", ""),
+  //   href: contactData.linkedin !== "#" ? contactData.linkedin : null,
+  // },
   {
     icon: GithubIcon,
     label: "GitHub",
