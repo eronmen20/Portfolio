@@ -63,18 +63,16 @@ export default function ProjectDetail() {
           <span className="text-foreground font-medium">{project.title}</span>
         </motion.div>
 
-        {/* === HERO: Thumbnail + Gallery side by side ===
-            FIX TINGGI: h-[300px] sm:h-[360px] lg:h-[420px]
-            Kedua kolom PUNYA TINGGI SAMA, gak bisa berubah-ubah */}
+        {/* === HERO: Thumbnail + Gallery === */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="h-[300px] sm:h-[360px] lg:h-[420px] flex flex-col sm:flex-row gap-4 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 auto-rows-[300px] sm:auto-rows-[360px] lg:auto-rows-[420px]"
         >
-          {/* LEFT: Thumbnail — fills height, object-cover */}
+          {/* LEFT: Thumbnail */}
           <div
-            className="sm:w-1/2 h-full rounded-2xl overflow-hidden border border-border cursor-pointer bg-muted/50 relative flex-shrink-0"
+            className="rounded-2xl overflow-hidden border border-border cursor-pointer bg-muted/50 relative"
             onClick={() => gallery.length > 0 && openLightbox(0)}
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/5 to-accent/5">
@@ -90,40 +88,42 @@ export default function ProjectDetail() {
             />
           </div>
 
-          {/* RIGHT: Gallery — fills height, scroll */}
+          {/* RIGHT: Project Gallery */}
           {gallery.length > 0 && (
-            <div className="sm:w-1/2 h-full min-h-0 flex flex-col rounded-2xl border border-border bg-muted/30 overflow-hidden">
+            <div className="rounded-2xl border border-border bg-muted/30 overflow-hidden flex flex-col">
               <p className="text-xs font-heading font-semibold text-muted-foreground uppercase tracking-wider px-4 pt-3 pb-2 shrink-0">
                 Project Gallery ({gallery.length})
               </p>
-              <div className="flex flex-col gap-2 overflow-y-auto flex-1 min-h-0 px-3 pb-3 scrollbar-thin">
-                {gallery.map((item, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    className="group relative w-full rounded-lg overflow-hidden border border-border/60 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer bg-muted/40 shrink-0"
-                    onClick={() => openLightbox(i)}
-                  >
-                    <div className="aspect-[16/9] relative overflow-hidden">
-                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-gradient-to-br from-primary/5 to-accent/5">
-                        <ImageIcon className="w-5 h-5 text-muted-foreground/30" />
-                        <span className="text-[10px] text-muted-foreground/40 font-sans">{i + 1}</span>
+              <div className="flex-1 overflow-y-auto min-h-0 px-3 pb-3">
+                <div className="flex flex-col gap-2">
+                  {gallery.map((item, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className="group relative w-full rounded-lg overflow-hidden border border-border/60 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer bg-muted/40 shrink-0"
+                      onClick={() => openLightbox(i)}
+                    >
+                      <div className="aspect-[16/9] relative overflow-hidden">
+                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-gradient-to-br from-primary/5 to-accent/5">
+                          <ImageIcon className="w-5 h-5 text-muted-foreground/30" />
+                          <span className="text-[10px] text-muted-foreground/40 font-sans">{i + 1}</span>
+                        </div>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={item.src}
+                          alt={item.caption || `${project.title} - ${i + 1}`}
+                          className="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                        />
                       </div>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={item.src}
-                        alt={item.caption || `${project.title} - ${i + 1}`}
-                        className="relative z-10 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                      />
-                    </div>
-                    {item.caption && (
-                      <p className="px-2.5 py-2 text-[11px] font-sans text-muted-foreground leading-snug text-left">
-                        {item.caption}
-                      </p>
-                    )}
-                  </button>
-                ))}
+                      {item.caption && (
+                        <p className="px-2.5 py-2 text-[11px] font-sans text-muted-foreground leading-snug text-left">
+                          {item.caption}
+                        </p>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           )}
