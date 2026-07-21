@@ -2,51 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, ExternalLink, Calendar } from "lucide-react";
-
-const certifications = [
-  {
-    title: "Laboratory Safety Certification",
-    issuer: "Health & Safety Institute",
-    date: "2024",
-    description: "Comprehensive laboratory safety and hazard management certification.",
-    credential: "#",
-  },
-  {
-    title: "Scientific Writing Workshop",
-    issuer: "University Research Center",
-    date: "2023",
-    description: "Advanced scientific writing and research paper composition.",
-    credential: "#",
-  },
-  {
-    title: "Web Development Bootcamp",
-    issuer: "Online Learning Platform",
-    date: "2024",
-    description: "Full-stack web development fundamentals with modern technologies.",
-    credential: "#",
-  },
-  {
-    title: "Data Analysis with Excel",
-    issuer: "Professional Development Institute",
-    date: "2023",
-    description: "Advanced data analysis, visualization, and reporting techniques.",
-    credential: "#",
-  },
-  {
-    title: "Microbiology Techniques",
-    issuer: "Biology Department",
-    date: "2023",
-    description: "Hands-on microbiology laboratory techniques and procedures.",
-    credential: "#",
-  },
-  {
-    title: "Google IT Support Certificate",
-    issuer: "Google via Coursera",
-    date: "2024",
-    description: "IT support fundamentals including networking, security, and troubleshooting.",
-    credential: "#",
-  },
-];
+import data from "@/data/skills.json";
 
 export default function Certifications() {
   return (
@@ -74,7 +30,7 @@ export default function Certifications() {
 
         {/* Certification Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, i) => (
+          {data.certifications.map((cert, i) => (
             <motion.div
               key={cert.title}
               initial={{ opacity: 0, y: 30 }}
@@ -85,6 +41,26 @@ export default function Certifications() {
             >
               {/* Top accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              {/* Certificate image placeholder */}
+              {cert.image && cert.image !== "" && (
+                <div className="w-full h-32 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 mb-4 overflow-hidden flex items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = "none";
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `<div class="flex items-center justify-center w-full h-full"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>`;
+                      }
+                    }}
+                  />
+                </div>
+              )}
 
               {/* Certificate icon */}
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -106,13 +82,18 @@ export default function Certifications() {
                 {cert.description}
               </p>
 
-              <a
-                href={cert.credential}
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-              >
-                View Credential
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+              {/* Credential link - hanya muncul kalau ada */}
+              {cert.credential && cert.credential !== "#" && (
+                <a
+                  href={cert.credential}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  View Credential
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

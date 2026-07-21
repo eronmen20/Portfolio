@@ -2,13 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Send,
-  Globe,
-  MapPin,
-  CheckCircle,
-} from "lucide-react";
+import { Mail, Send, Globe, MapPin, CheckCircle } from "lucide-react";
+import contactData from "@/data/contact.json";
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -30,31 +25,31 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: contactData.email,
+    href: `mailto:${contactData.email}`,
   },
   {
     icon: LinkedinIcon,
     label: "LinkedIn",
-    value: "linkedin.com/in/yourprofile",
-    href: "#",
+    value: contactData.linkedin.replace("https://", ""),
+    href: contactData.linkedin !== "#" ? contactData.linkedin : null,
   },
   {
     icon: GithubIcon,
     label: "GitHub",
-    value: "github.com/yourusername",
-    href: "#",
+    value: contactData.github.replace("https://", ""),
+    href: contactData.github !== "#" ? contactData.github : null,
   },
   {
     icon: Globe,
     label: "Portfolio",
-    value: "yourportfolio.com",
-    href: "#",
+    value: contactData.portfolio.replace("https://", ""),
+    href: contactData.portfolio !== "#" ? contactData.portfolio : null,
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Indonesia",
+    value: contactData.location,
     href: null,
   },
 ];
@@ -69,7 +64,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -95,8 +89,7 @@ export default function Contact() {
             Contact <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Feel free to reach out for collaborations, opportunities, or just a
-            friendly conversation about science and technology.
+            {contactData.message}
           </p>
         </motion.div>
 
@@ -112,9 +105,7 @@ export default function Contact() {
               Let&apos;s Connect
             </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              I&apos;m always open to discussing new opportunities, research
-              collaborations, or creative projects. Whether you have a question
-              or just want to say hi, feel free to reach out!
+              {contactData.connectText}
             </p>
 
             <div className="space-y-4">
@@ -133,6 +124,8 @@ export default function Contact() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm font-medium hover:text-primary transition-colors"
                       >
                         {item.value}

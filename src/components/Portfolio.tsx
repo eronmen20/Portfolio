@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Eye } from "lucide-react";
+import { ExternalLink, FileText, Eye } from "lucide-react";
+import content from "@/data/content.json";
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -12,81 +13,15 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
+// Kategori yang bisa punya GitHub & Demo
+const webCategories = ["Web Development"];
+
+// Kategori yang pakai Document link
+const docCategories = ["Education", "Research", "Data Management"];
+
 const categories = [
   "All",
-  "Education",
-  "Research",
-  "Data Management",
-  "Web Development",
-];
-
-const projects = [
-  {
-    title: "Interactive Biology Learning Module",
-    description:
-      "An interactive e-learning platform for biology students featuring quizzes, simulations, and progress tracking.",
-    category: "Education",
-    tags: ["HTML", "CSS", "JavaScript", "Education"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
-  {
-    title: "Microbiology Lab Report System",
-    description:
-      "Digital system for recording and managing microbiology laboratory results with automated analysis.",
-    category: "Research",
-    tags: ["Research", "Data Analysis", "Documentation"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
-  {
-    title: "Student Performance Dashboard",
-    description:
-      "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
-    category: "Data Management",
-    tags: ["Excel", "Data Cleaning", "Visualization"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
-  {
-    title: "Personal Portfolio Website",
-    description:
-      "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
-    category: "Web Development",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
-  {
-    title: "Scientific Writing Workshop Materials",
-    description:
-      "Comprehensive teaching materials for scientific writing workshops targeting undergraduate students.",
-    category: "Education",
-    tags: ["Teaching", "Scientific Writing", "Materials"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
-  {
-    title: "Sample Tracking Application",
-    description:
-      "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
-    category: "Research",
-    tags: ["Web App", "Database", "Laboratory"],
-    image: "/placeholder-project.svg",
-    github: "#",
-    demo: "#",
-    view: "#",
-  },
+  ...Array.from(new Set(content.projects.map((p) => p.category))),
 ];
 
 export default function Portfolio() {
@@ -94,8 +29,8 @@ export default function Portfolio() {
 
   const filtered =
     activeFilter === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeFilter);
+      ? content.projects
+      : content.projects.filter((p) => p.category === activeFilter);
 
   return (
     <section id="portfolio" className="section-padding bg-muted/50">
@@ -146,79 +81,128 @@ export default function Portfolio() {
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
-              <motion.div
-                key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                className="group relative rounded-2xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-300"
-              >
-                {/* Project Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto rounded-xl bg-primary/20 flex items-center justify-center mb-2">
-                      <Eye className="w-8 h-8 text-primary" />
+            {filtered.map((project) => {
+              const isWeb = webCategories.includes(project.category);
+              const isDoc = docCategories.includes(project.category);
+
+              return (
+                <motion.div
+                  key={project.title}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="group relative rounded-2xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+                >
+                  {/* Project Image */}
+                  <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent && !parent.querySelector(".fallback")) {
+                          const fallback = document.createElement("div");
+                          fallback.className = "fallback text-center";
+                          fallback.innerHTML = `
+                            <div style="width:64px;height:64px;margin:0 auto 8px;border-radius:12px;background:rgba(45,138,78,0.2);display:flex;align-items:center;justify-content:center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <p style="font-size:12px;color:var(--muted-foreground)">Tambah gambar di<br/><strong>public/images/projects/</strong></p>
+                          `;
+                          parent.appendChild(fallback);
+                        }
+                      }}
+                    />
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                      {/* View Detail - selalu ada */}
+                      {project.links.view && project.links.view !== "#" && (
+                        <a
+                          href={project.links.view}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                          title="View Project"
+                        >
+                          <Eye className="w-5 h-5" />
+                        </a>
+                      )}
+
+                      {/* GitHub - HANYA untuk Web Development */}
+                      {isWeb && project.links.github && project.links.github !== "#" && (
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                          title="GitHub"
+                        >
+                          <GithubIcon className="w-5 h-5" />
+                        </a>
+                      )}
+
+                      {/* Live Demo - HANYA untuk Web Development */}
+                      {isWeb && project.links.demo && project.links.demo !== "#" && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                          title="Live Demo"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+
+                      {/* Document - untuk Education, Research, Data Management */}
+                      {isDoc && project.links.document && project.links.document !== "#" && (
+                        <a
+                          href={project.links.document}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
+                          title="View Document"
+                        >
+                          <FileText className="w-5 h-5" />
+                        </a>
+                      )}
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      Project Preview
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    <span className="text-xs font-medium text-primary uppercase tracking-wider">
+                      {project.category}
+                    </span>
+                    <h3 className="text-lg font-heading font-semibold mt-1 mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                      {project.description}
                     </p>
-                  </div>
 
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                    <a
-                      href={project.view}
-                      className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                      title="View Project"
-                    >
-                      <Eye className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={project.github}
-                      className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                      title="GitHub"
-                    >
-                      <GithubIcon className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors"
-                      title="Live Demo"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-1 text-xs rounded-full bg-muted text-muted-foreground border border-border"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                  <h3 className="text-lg font-heading font-semibold mt-1 mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 text-xs rounded-full bg-muted text-muted-foreground border border-border"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
       </div>

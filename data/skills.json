@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "title": "Laboratory Skills",
+      "skills": ["Microbiology", "Biotechnology", "Laboratory Management", "Scientific Writing", "Sample Preparation", "Hematology", "Quality Control"]
+    },
+    {
+      "title": "Research Skills",
+      "skills": ["Literature Review", "Research Design", "Data Analysis", "Report Writing", "Research Methodology", "Peer Review"]
+    },
+    {
+      "title": "Data Management",
+      "skills": ["Microsoft Excel", "Google Workspace", "Data Cleaning", "Database Management", "Documentation", "Data Visualization"]
+    },
+    {
+      "title": "Web Development",
+      "skills": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Responsive Design", "UI Design"]
+    },
+    {
+      "title": "Soft Skills",
+      "skills": ["Communication", "Problem Solving", "Leadership", "Teamwork", "Time Management", "Critical Thinking", "Adaptability"]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Laboratory Safety Certification",
+      "issuer": "Health & Safety Institute",
+      "date": "2024",
+      "description": "Comprehensive laboratory safety and hazard management certification.",
+      "credential": "#",
+      "image": "/images/certs/cert-1.jpg"
+    },
+    {
+      "title": "Scientific Writing Workshop",
+      "issuer": "University Research Center",
+      "date": "2023",
+      "description": "Advanced scientific writing and research paper composition.",
+      "credential": "#",
+      "image": "/images/certs/cert-2.jpg"
+    },
+    {
+      "title": "Web Development Bootcamp",
+      "issuer": "Online Learning Platform",
+      "date": "2024",
+      "description": "Full-stack web development fundamentals with modern technologies.",
+      "credential": "#",
+      "image": "/images/certs/cert-3.jpg"
+    },
+    {
+      "title": "Data Analysis with Excel",
+      "issuer": "Professional Development Institute",
+      "date": "2023",
+      "description": "Advanced data analysis, visualization, and reporting techniques.",
+      "credential": "#",
+      "image": "/images/certs/cert-4.jpg"
+    },
+    {
+      "title": "Microbiology Techniques",
+      "issuer": "Biology Department",
+      "date": "2023",
+      "description": "Hands-on microbiology laboratory techniques and procedures.",
+      "credential": "#",
+      "image": "/images/certs/cert-5.jpg"
+    },
+    {
+      "title": "Google IT Support Certificate",
+      "issuer": "Google via Coursera",
+      "date": "2024",
+      "description": "IT support fundamentals including networking, security, and troubleshooting.",
+      "credential": "#",
+      "image": "/images/certs/cert-6.jpg"
+    }
+  ]
+}

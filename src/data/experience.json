@@ -1,0 +1,46 @@
+{
+  "experience": [
+    {
+      "title": "Teaching Assistant",
+      "institution": "University Name",
+      "duration": "2023 - 2024",
+      "description": "Assisted faculty in teaching biology courses, prepared laboratory materials, and mentored students in practical sessions.",
+      "achievement": "Improved student lab performance by 20%"
+    },
+    {
+      "title": "Research Assistant",
+      "institution": "Research Laboratory",
+      "duration": "2023",
+      "description": "Conducted microbiology research, prepared samples, performed analysis, and contributed to scientific report writing.",
+      "achievement": "Co-authored research publication"
+    },
+    {
+      "title": "Laboratory Intern",
+      "institution": "Healthcare Institution",
+      "duration": "2022 - 2023",
+      "description": "Performed hematology tests, managed laboratory equipment, maintained quality control protocols, and documented results.",
+      "achievement": "Zero-error rate in sample processing"
+    },
+    {
+      "title": "Student Mentor",
+      "institution": "University Biology Department",
+      "duration": "2022 - 2023",
+      "description": "Mentored junior students in biology subjects, organized study groups, and facilitated learning workshops.",
+      "achievement": "Mentored 30+ students successfully"
+    },
+    {
+      "title": "Community Volunteer",
+      "institution": "Environmental Organization",
+      "duration": "2021 - 2022",
+      "description": "Participated in environmental conservation projects, community education programs, and scientific outreach activities.",
+      "achievement": "Organized 5 community workshops"
+    },
+    {
+      "title": "Administrative Intern",
+      "institution": "Research Institution",
+      "duration": "2022",
+      "description": "Managed research databases, prepared reports, organized documentation, and supported administrative operations.",
+      "achievement": "Streamlined data filing system"
+    }
+  ]
+}

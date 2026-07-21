@@ -1,82 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  Microscope,
-  Database,
-  Code,
-} from "lucide-react";
+import { GraduationCap, Microscope, Database, Code } from "lucide-react";
+import content from "@/data/content.json";
 
-const expertiseData = [
-  {
-    icon: GraduationCap,
-    title: "Education",
-    color: "from-green-500 to-emerald-600",
-    bgLight: "bg-green-50 dark:bg-green-950/30",
-    description:
-      "Passionate about teaching and creating engaging learning experiences that make complex biological concepts accessible.",
-    skills: [
-      "Teaching",
-      "Learning Material Development",
-      "Scientific Communication",
-      "Educational Media",
-      "Mentoring",
-    ],
-  },
-  {
-    icon: Microscope,
-    title: "Research & Laboratory",
-    color: "from-blue-500 to-cyan-600",
-    bgLight: "bg-blue-50 dark:bg-blue-950/30",
-    description:
-      "Hands-on experience in laboratory management, sample analysis, and scientific research with attention to quality control.",
-    skills: [
-      "Laboratory Management",
-      "Sample Preparation",
-      "Hematology",
-      "Microbiology",
-      "Biotechnology",
-      "Quality Control",
-      "Scientific Reporting",
-    ],
-  },
-  {
-    icon: Database,
-    title: "Data Management",
-    color: "from-purple-500 to-violet-600",
-    bgLight: "bg-purple-50 dark:bg-purple-950/30",
-    description:
-      "Skilled in organizing, cleaning, and managing data with precision. Experienced in administrative support and documentation.",
-    skills: [
-      "Data Entry",
-      "Data Cleaning",
-      "Excel",
-      "Documentation",
-      "Database Management",
-      "Report Preparation",
-      "Digital Organization",
-    ],
-  },
-  {
-    icon: Code,
-    title: "Web Development",
-    color: "from-orange-500 to-amber-600",
-    bgLight: "bg-orange-50 dark:bg-orange-950/30",
-    description:
-      "Building modern, responsive web applications with clean code and intuitive user interfaces.",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Responsive Design",
-      "Git",
-      "GitHub",
-      "UI Design",
-      "Frontend Development",
-    ],
-  },
-];
+const iconMap: Record<string, React.ElementType> = {
+  Education: GraduationCap,
+  "Research & Laboratory": Microscope,
+  "Data Management": Database,
+  "Web Development": Code,
+};
+
+const colorMap: Record<string, string> = {
+  Education: "from-green-500 to-emerald-600",
+  "Research & Laboratory": "from-blue-500 to-cyan-600",
+  "Data Management": "from-purple-500 to-violet-600",
+  "Web Development": "from-orange-500 to-amber-600",
+};
+
+const bgMap: Record<string, string> = {
+  Education: "bg-green-50 dark:bg-green-950/30",
+  "Research & Laboratory": "bg-blue-50 dark:bg-blue-950/30",
+  "Data Management": "bg-purple-50 dark:bg-purple-950/30",
+  "Web Development": "bg-orange-50 dark:bg-orange-950/30",
+};
 
 export default function Expertise() {
   return (
@@ -104,50 +51,56 @@ export default function Expertise() {
 
         {/* Expertise Cards */}
         <div className="grid md:grid-cols-2 gap-6">
-          {expertiseData.map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden"
-            >
-              {/* Gradient accent */}
-              <div
-                className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color} opacity-0 group-hover:opacity-100 transition-opacity`}
-              />
+          {content.expertise.map((item, i) => {
+            const Icon = iconMap[item.title] || Code;
+            const color = colorMap[item.title] || "from-gray-500 to-gray-600";
+            const bg = bgMap[item.title] || "bg-gray-50 dark:bg-gray-950/30";
 
-              <div className="flex items-start gap-4">
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.5 }}
+                className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              >
+                {/* Gradient accent */}
                 <div
-                  className={`flex-shrink-0 w-14 h-14 rounded-2xl ${item.bgLight} flex items-center justify-center group-hover:scale-110 transition-transform`}
-                >
-                  <item.icon className="w-7 h-7 text-primary" />
-                </div>
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-100 transition-opacity`}
+                />
 
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
+                <div className="flex items-start gap-4">
+                  <div
+                    className={`flex-shrink-0 w-14 h-14 rounded-2xl ${bg} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                  >
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
 
-                  {/* Skill tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {item.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border hover:border-primary/30 hover:text-primary transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-heading font-semibold mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    {/* Skill tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {item.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border hover:border-primary/30 hover:text-primary transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

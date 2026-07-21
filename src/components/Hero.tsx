@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, FolderOpen, Mail, Microscope, FlaskConical, Dna, Atom } from "lucide-react";
+import profile from "@/data/profile.json";
 
 const floatingIcons = [
   { Icon: Microscope, x: "10%", y: "20%", delay: 0, size: 28 },
@@ -59,7 +60,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Available for Opportunities
+              {profile.status}
             </motion.div>
 
             <motion.h1
@@ -69,7 +70,7 @@ export default function Hero() {
               className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4"
             >
               Hi, I&apos;m{" "}
-              <span className="gradient-text">Your Name</span>
+              <span className="gradient-text">{profile.name}</span>
             </motion.h1>
 
             <motion.p
@@ -78,8 +79,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto lg:mx-0"
             >
-              Biology Education Graduate | Research & Laboratory | Data
-              Management | Web Developer
+              {profile.tagline}
             </motion.p>
 
             <motion.p
@@ -88,10 +88,7 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Passionate about bridging science and technology. With a strong
-              foundation in biology education, hands-on laboratory experience,
-              and growing expertise in web development, I bring a unique
-              multidisciplinary perspective to every project.
+              {profile.description}
             </motion.p>
 
             <motion.div
@@ -100,8 +97,10 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
+              {/* Download CV - langsung download PDF */}
               <a
-                href="#contact"
+                href={profile.cvFile}
+                download
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:shadow-lg transition-all hover:-translate-y-0.5"
               >
                 <Download className="w-4 h-4" />
@@ -124,7 +123,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right - Profile Photo Placeholder */}
+          {/* Right - Profile Photo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -133,14 +132,29 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center mb-4">
-                    <Microscope className="w-12 h-12 text-primary" />
-                  </div>
-                  <p className="text-sm text-muted-foreground font-medium">
-                    Professional Photo
-                  </p>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={profile.photo}
+                  alt={profile.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback kalau gambar tidak ada
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    const parent = target.parentElement;
+                    if (parent && !parent.querySelector(".fallback")) {
+                      const fallback = document.createElement("div");
+                      fallback.className = "fallback text-center p-8";
+                      fallback.innerHTML = `
+                        <div style="width:96px;height:96px;margin:0 auto 16px;border-radius:50%;background:rgba(45,138,78,0.2);display:flex;align-items:center;justify-content:center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M6 19h4"/><path d="M10 19h4"/><path d="M14 19h4"/><path d="M18 19h2"/><path d="M6 6h4"/><path d="M10 6h4"/><path d="M14 6h4"/><path d="M18 6h2"/><path d="M8 6V4"/><path d="M16 6V4"/><path d="M8 6v6"/><path d="M16 6v6"/></svg>
+                        </div>
+                        <p style="font-size:14px;color:var(--muted-foreground)">Tambah foto di<br/><strong>public/images/profile.jpg</strong></p>
+                      `;
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
               </div>
 
               {/* Decorative elements */}

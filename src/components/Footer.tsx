@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Heart, ArrowUp, Mail } from "lucide-react";
+import contactData from "@/data/contact.json";
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -31,9 +31,13 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
-  { icon: GithubIcon, href: "#", label: "GitHub" },
-  { icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+  { icon: Mail, href: `mailto:${contactData.email}`, label: "Email" },
+  ...(contactData.github && contactData.github !== "#"
+    ? [{ icon: GithubIcon, href: contactData.github, label: "GitHub" }]
+    : []),
+  ...(contactData.linkedin && contactData.linkedin !== "#"
+    ? [{ icon: LinkedinIcon, href: contactData.linkedin, label: "LinkedIn" }]
+    : []),
 ];
 
 export default function Footer() {
@@ -65,6 +69,8 @@ export default function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target={social.href.startsWith("mailto") ? undefined : "_blank"}
+                  rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                   aria-label={social.label}
                   className="w-10 h-10 rounded-xl bg-muted border border-border flex items-center justify-center hover:border-primary/30 hover:text-primary transition-all"
                 >

@@ -2,43 +2,44 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap, MapPin, Briefcase, Heart, Star, BookOpen } from "lucide-react";
+import profile from "@/data/profile.json";
 
 const infoCards = [
   {
     icon: GraduationCap,
     label: "Education",
-    value: "S.Pd. Biology Education",
-    detail: "GPA: 3.XX / 4.00",
+    value: profile.education.degree,
+    detail: `GPA: ${profile.education.gpa}`,
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Indonesia",
-    detail: "Open to relocation",
+    value: profile.location,
+    detail: profile.relocation,
   },
   {
     icon: Briefcase,
     label: "Career Interests",
-    value: "Research, Lab, Education",
-    detail: "Data Management & Web Dev",
+    value: profile.careerInterests.slice(0, 3).join(", "),
+    detail: profile.careerInterests.slice(3).join(", ") || "",
   },
   {
     icon: Heart,
     label: "Passion",
-    value: "Science & Technology",
-    detail: "Bridging biology & digital",
+    value: profile.passion,
+    detail: profile.passionDetail,
   },
   {
     icon: Star,
     label: "Strength",
-    value: "Analytical Thinking",
-    detail: "Detail-oriented & organized",
+    value: profile.strength,
+    detail: profile.strengthDetail,
   },
   {
     icon: BookOpen,
     label: "Focus",
-    value: "Continuous Learning",
-    detail: "Always growing & adapting",
+    value: profile.focus,
+    detail: profile.focusDetail,
   },
 ];
 
@@ -61,9 +62,8 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A dedicated Biology Education graduate with a passion for science,
-            research, and technology. I combine academic excellence with
-            practical skills to deliver meaningful contributions.
+            A dedicated {profile.education.degree} graduate with a passion for
+            science, research, and technology.
           </p>
         </motion.div>
 
@@ -80,25 +80,9 @@ export default function About() {
               Bridging Science & Technology
             </h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                As a fresh graduate in Biology Education, I have developed a
-                strong foundation in scientific methodology, laboratory
-                techniques, and educational practices. My academic journey has
-                equipped me with both theoretical knowledge and hands-on
-                experience in various biological disciplines.
-              </p>
-              <p>
-                Beyond biology, I have cultivated skills in data management and
-                web development, allowing me to approach problems with a unique
-                multidisciplinary perspective. I believe that the intersection
-                of science and technology holds the key to innovative solutions.
-              </p>
-              <p>
-                I am detail-oriented, organized, and passionate about continuous
-                learning. Whether it&apos;s conducting laboratory research,
-                managing data, or building web applications, I bring the same
-                level of dedication and analytical thinking to every task.
-              </p>
+              {profile.aboutDescription.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
           </motion.div>
 
@@ -126,7 +110,9 @@ export default function About() {
                   {card.label}
                 </p>
                 <p className="text-sm font-semibold mb-0.5">{card.value}</p>
-                <p className="text-xs text-muted-foreground">{card.detail}</p>
+                {card.detail && (
+                  <p className="text-xs text-muted-foreground">{card.detail}</p>
+                )}
               </motion.div>
             ))}
           </motion.div>

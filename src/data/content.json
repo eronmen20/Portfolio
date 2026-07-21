@@ -1,0 +1,104 @@
+{
+  "expertise": [
+    {
+      "title": "Education",
+      "description": "Passionate about teaching and creating engaging learning experiences that make complex biological concepts accessible.",
+      "skills": ["Teaching", "Learning Material Development", "Scientific Communication", "Educational Media", "Mentoring"]
+    },
+    {
+      "title": "Research & Laboratory",
+      "description": "Hands-on experience in laboratory management, sample analysis, and scientific research with attention to quality control.",
+      "skills": ["Laboratory Management", "Sample Preparation", "Hematology", "Microbiology", "Biotechnology", "Quality Control", "Scientific Reporting"]
+    },
+    {
+      "title": "Data Management",
+      "description": "Skilled in organizing, cleaning, and managing data with precision. Experienced in administrative support and documentation.",
+      "skills": ["Data Entry", "Data Cleaning", "Excel", "Documentation", "Database Management", "Report Preparation", "Digital Organization"]
+    },
+    {
+      "title": "Web Development",
+      "description": "Building modern, responsive web applications with clean code and intuitive user interfaces.",
+      "skills": ["HTML", "CSS", "JavaScript", "Responsive Design", "Git", "GitHub", "UI Design", "Frontend Development"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Interactive Biology Learning Module",
+      "description": "An interactive e-learning platform for biology students featuring quizzes, simulations, and progress tracking.",
+      "category": "Education",
+      "tags": ["HTML", "CSS", "JavaScript", "Education"],
+      "image": "/images/projects/education-1.jpg",
+      "links": {
+        "view": "#",
+        "document": "https://docs.google.com/document/d/YOUR_DOC_ID",
+        "github": null,
+        "demo": null
+      }
+    },
+    {
+      "title": "Microbiology Lab Report System",
+      "description": "Digital system for recording and managing microbiology laboratory results with automated analysis.",
+      "category": "Research",
+      "tags": ["Research", "Data Analysis", "Documentation"],
+      "image": "/images/projects/research-1.jpg",
+      "links": {
+        "view": "#",
+        "document": "https://docs.google.com/document/d/YOUR_DOC_ID",
+        "github": null,
+        "demo": null
+      }
+    },
+    {
+      "title": "Student Performance Dashboard",
+      "description": "Excel-based dashboard for tracking and analyzing student academic performance across multiple metrics.",
+      "category": "Data Management",
+      "tags": ["Excel", "Data Cleaning", "Visualization"],
+      "image": "/images/projects/data-1.jpg",
+      "links": {
+        "view": "#",
+        "document": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID",
+        "github": null,
+        "demo": null
+      }
+    },
+    {
+      "title": "Personal Portfolio Website",
+      "description": "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+      "category": "Web Development",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "image": "/images/projects/web-1.jpg",
+      "links": {
+        "view": "#",
+        "document": null,
+        "github": "https://github.com/yourusername/portfolio",
+        "demo": "https://your-portfolio.vercel.app"
+      }
+    },
+    {
+      "title": "Scientific Writing Workshop Materials",
+      "description": "Comprehensive teaching materials for scientific writing workshops targeting undergraduate students.",
+      "category": "Education",
+      "tags": ["Teaching", "Scientific Writing", "Materials"],
+      "image": "/images/projects/education-2.jpg",
+      "links": {
+        "view": "#",
+        "document": "https://docs.google.com/document/d/YOUR_DOC_ID",
+        "github": null,
+        "demo": null
+      }
+    },
+    {
+      "title": "Sample Tracking Application",
+      "description": "Web-based application for tracking laboratory samples from collection to analysis with status updates.",
+      "category": "Web Development",
+      "tags": ["Web App", "Database", "Laboratory"],
+      "image": "/images/projects/web-2.jpg",
+      "links": {
+        "view": "#",
+        "document": null,
+        "github": "https://github.com/yourusername/sample-tracker",
+        "demo": "https://sample-tracker.vercel.app"
+      }
+    }
+  ]
+}
