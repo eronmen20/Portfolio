@@ -126,12 +126,10 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--glass-border);
 }
 
-/* Gradient text - soft pastel blue */
+/* Gradient text - solid soft pastel blue */
 .gradient-text {
-  background: linear-gradient(135deg, #93c5fd, #7dd3fc, #67e8f9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #93c5fd;
+  -webkit-text-fill-color: #93c5fd;
 }
 
 /* Animated background dots */
