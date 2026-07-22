@@ -240,10 +240,10 @@
         "challenge": "Visually impaired students have limited access to learning media for Javanese script, as conventional teaching materials rely heavily on visual instruction. This creates barriers to understanding and reduces opportunities to engage with local cultural education.",
         "solution": "Developed a multisensory learning medium that integrates embossed Javanese characters, Braille labels, and Arduino-powered audio guidance. The interactive design enables students to explore Javanese script independently through touch and sound, making the learning experience more accessible and engaging.",
         "results": [
-          "Improved student engagement by 40% compared to traditional materials",
-          "Quiz completion rate increased from 60% to 95%",
-          "Students reported better understanding of complex biological concepts"
-        ],
+                  "92% of teachers at SLBA Yaketunis are able to teach Javanese script effectively using the Repin Aja media",
+                  "88% of students are able to master all materials from level 1 to 6",
+                  "Increased student interest in learning Javanese language"
+                ],
         "technologies": [
           "Arduino UNO",
           "3D Print",
