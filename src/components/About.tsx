@@ -62,8 +62,7 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A dedicated {profile.education.degree} graduate with a passion for
-            science, research, and technology.
+            A dedicated {profile.education.degree} graduate passionate about science, research, education, and administration, with an interest in leveraging technology to create meaningful solutions.
           </p>
         </motion.div>
 

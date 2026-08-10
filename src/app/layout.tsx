@@ -19,12 +19,12 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Portfolio | Biology Education Graduate",
   description:
-    "Professional portfolio of a Biology Education graduate with expertise in research, laboratory, data management, and web development.",
+    "Professional portfolio of a Biology Education graduate with expertise in research, administration, data management, and web development.",
   keywords: [
     "biology",
     "education",
     "research",
-    "laboratory",
+    "administration",
     "portfolio",
     "web developer",
     "data management",

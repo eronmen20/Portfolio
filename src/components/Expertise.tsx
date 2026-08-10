@@ -7,14 +7,14 @@ import content from "@/data/content.json";
 const iconMap: Record<string, React.ElementType> = {
   Education: GraduationCap,
   "Research & Laboratory": Microscope,
-  "Data Management": Database,
+  "Administration & Data Management": Database,
   "Web Development": Code,
 };
 
 const colorMap: Record<string, string> = {
   Education: "from-blue-500 to-sky-500",
   "Research & Laboratory": "from-violet-500 to-purple-500",
-  "Data Management": "from-orange-500 to-amber-500",
+  "Administration & Data Management": "from-orange-500 to-amber-500",
   "Web Development": "from-pink-500 to-rose-500",
 };
 
@@ -37,7 +37,7 @@ export default function Expertise() {
             My <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Multidisciplinary skills spanning education, research, data
+            Multidisciplinary skills spanning education, research, administration, data
             management, and web development.
           </p>
         </motion.div>

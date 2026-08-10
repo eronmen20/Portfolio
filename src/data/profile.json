@@ -1,7 +1,7 @@
 {
   "name": "Aeryn Deswita Kussikanto",
-  "tagline": "Biology Education Graduate | Laboratory & Research Assistant | Data Management | Web Developer",
-  "description": "Passionate about bridging science and technology. With a strong foundation in biology education, hands-on laboratory experience, and growing expertise in web development, I bring a unique multidisciplinary perspective to every project.",
+  "tagline": "Biology Education Graduate | Research Assistant | Data Management | Administration | Web Developer",
+  "description": "I am a Biology Education graduate passionate about science, technology, and effective administration. With experience in research activities, data management, educational projects, and web development, I bring a multidisciplinary approach that combines scientific knowledge, analytical thinking, digital skills, and strong organizational abilities. I am eager to contribute to projects that value accuracy, continuous learning, and meaningful impact.",
   "photo": "/images/projects/portfolio/foto.jpg",
   "cvFile": "/files/cv.pdf",
   "status": "Available for Opportunities",
@@ -13,16 +13,16 @@
   },
   "location": "Indonesia",
   "relocation": "Open to relocation",
-  "careerInterests": ["Research", "Laboratory", "Education", "Data Management", "Web Development"],
-  "passion": "Science & Technology",
-  "passionDetail": "Bridging biology & digital",
+  "careerInterests": ["Research", "Administration", "Education", "Data Management", "Web Development"],
+  "passion": "Science, Education, & Administration",
+  "passionDetail": "Connecting knowledge, data & technology",
   "strength": "Analytical Thinking",
   "strengthDetail": "Detail-oriented & organized",
   "focus": "Continuous Learning",
   "focusDetail": "Always growing & adapting",
   "aboutDescription": [
-    "As a fresh graduate in Biology Education, I have developed a strong foundation in scientific methodology, laboratory techniques, and educational practices. My academic journey has equipped me with both theoretical knowledge and hands-on experience in various biological disciplines.",
-    "Beyond biology, I have cultivated skills in data management and web development, allowing me to approach problems with a unique multidisciplinary perspective. I believe that the intersection of science and technology holds the key to innovative solutions.",
-    "I am detail-oriented, organized, and passionate about continuous learning. Whether it's conducting laboratory research, managing data, or building web applications, I bring the same level of dedication and analytical thinking to every task."
+    "As a fresh graduate in Biology Education, I have developed a strong foundation in scientific methodology, laboratory techniques, research, and educational practices. My academic journey has equipped me with both theoretical knowledge and hands-on experience across various areas of biology.",
+    "Beyond biology and education, I have developed skills in administration, data management, and web development. These experiences have strengthened my organizational abilities, attention to detail, analytical thinking, and adaptability, allowing me connect scientific knowledge with digital tools and organized workflows.",
+    "I am a detail-oriented, organized, and continuous learner who values accuracy, collaboration, and meaningful contribution. Whether supporting educational activities, conducting research, managing data and administrative tasks, or working on digital projects, I bring the same level of dedication, responsibility, and willingness to learn to every opportunity."
   ]
 }
