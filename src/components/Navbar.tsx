@@ -22,7 +22,7 @@ const groupedProjects = content.projects.reduce<Record<string, typeof content.pr
   return acc;
 }, {});
 
-const categoryOrder = ["Laboratory Experience", "Education", "Data Management", "Web Development"];
+const categoryOrder = ["Education", "Data Management", "Laboratory Experience", "Web Development"];
 
 const navLinks = [
   { href: "#home", label: "Home" },
