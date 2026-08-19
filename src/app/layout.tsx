@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Biology Education Graduate",
+  title: "Portfolio | Aeryn Deswita Kussikanto",
   description:
     "Professional portfolio of a Biology Education graduate with expertise in research, administration, data management, and web development.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "data management",
   ],
   openGraph: {
-    title: "Portfolio | Biology Education Graduate",
+    title: "Portfolio | Aeryn Deswita Kussikanto",
     description:
       "Professional portfolio showcasing multidisciplinary expertise in science, research, and technology.",
     type: "website",
